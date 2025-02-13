@@ -1,7 +1,11 @@
 body {
+  overflow-x: hidden;
+  background-color: #ffffff;
   padding: 35px;
-  margin: 0;
-  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* Fonts being used throughout the website */
@@ -49,4 +53,15 @@ body {
 
 .Gilroy-BoldItalic {
   font-family: "Gilroy-BoldItalic";
+}
+
+
+@media screen and (max-width: 1024px) {
+  .LoginButtonNav {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 480px) {
 }
