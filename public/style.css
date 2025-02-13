@@ -1,0 +1,52 @@
+body {
+  padding: 35px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Fonts being used throughout the website */
+
+@font-face {
+  font-family: "Gilroy-Regular";
+  src: url(./fonts/Gilroy-Regular.ttf);
+}
+
+.Gilroy-Regular {
+  font-family: "Gilroy-Regular";
+}
+
+@font-face {
+  font-family: "Gilroy-Medium";
+  src: url(./fonts/Gilroy-Medium.ttf);
+}
+
+.Gilroy-Medium {
+  font-family: "Gilroy-Medium";
+}
+
+@font-face {
+  font-family: "Gilroy-Semibold";
+  src: url(./fonts/Gilroy-SemiBold.ttf);
+}
+
+.Gilroy-Semibold {
+  font-family: "Gilroy-Semibold";
+}
+
+@font-face {
+  font-family: "Gilroy-Bold";
+  src: url(./fonts/Gilroy-Bold.ttf);
+}
+
+.Gilroy-Bold {
+  font-family: "Gilroy-Bold";
+}
+
+@font-face {
+  font-family: "Gilroy-BoldItalic";
+  src: url(./fonts/Gilroy-BlackItalic.ttf);
+}
+
+.Gilroy-BoldItalic {
+  font-family: "Gilroy-BoldItalic";
+}
