@@ -24,5 +24,10 @@ connection.connect();
 app.get('/', (req, res) => {
     res.sendFile(__dirname + "/public/index.html");
 });
+
+// Serve the index.html file
+app.get('/login', (req, res) => {
+    res.sendFile(__dirname + "/public/login/login.html");
+});
  
 app.use(express.static("public"));

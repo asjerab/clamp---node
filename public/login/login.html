@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Hjem</title>
+  </head>
+  <body>
+    <main class="flex justify-center items-center flex-col">
+      <section class="w-full" style="max-width: clamp(1200px, 1000vw, 1920px)">
+        <nav class="flex justify-between items-center">
+          <a href="/">
+            <h1
+              class="Gilroy-Semibold"
+              style="font-size: clamp(25px, 10vw, 50px)"
+            >
+              clamp
+            </h1>
+          </a>
+          <div class="flex gap-1 items-center">
+            <a href="./login.html">
+              <button
+                class="LoginButtonNav Gilroy-Medium px-10 py-3 rounded-full cursor-pointer border-[0.5px] border-[#dddddd] hover:bg-[#f9f9f9] border-opacity-95 hover:scale-105 transition-all duration-300 active:scale-95"
+              >
+                Login
+              </button>
+            </a>
+            <button
+              class="p-3 bg-[#3a86ff] rounded-full cursor-pointer hover:scale-105 transition-all duration-300 active:scale-95"
+              id="openMenuButton"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6 text-slate-50"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            </button>
+          </div>
+        </nav>
+        <div
+          class="NavigationMenu absolute right-10 h-auto border-[0.5px] border-[#eeeeee] bg-white z-50 p-6 mt-[0.10rem] rounded-[16px] w-full max-w-[350px] shadow-xl box-border hidden"
+          id="NavigationMenuWrapper"
+        >
+          <nav
+            class="hiddenNavMenu hidden flex justify-between items-center mb-7 p-2"
+          >
+            <h1
+              class="Gilroy-Semibold"
+              style="font-size: clamp(25px, 10vw, 50px)"
+            >
+              clamp
+            </h1>
+            <button
+              class="p-3 bg-[#3a86ff] rounded-full cursor-pointer hover:scale-105 transition-all duration-300 active:scale-95"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6 text-slate-50"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            </button>
+          </nav>
+          <div class="flex flex-col gap-2" id="NavigationMenu"></div>
+          <button
+            class="hidden hiddenNavLoginButton Gilroy-Medium w-full bg-[#3a86ff] text-white my-4 px-7 py-3 gap-2 rounded-[16px] cursor-pointer border-[0.5px] border-[#dddddd] border-opacity-95 hover:scale-105 transition-all duration-300 active:scale-99"
+          >
+            Login
+          </button>
+        </div>
+        <div class="flex justify-center items-center">
+          <div class="flex flex-col gap-2">
+            <h1>Login</h1>
+            <input type="text" placeholder="Username" />
+            <input type="password" placeholder="Password" />
+            <button class="cursor-pointer">Login</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

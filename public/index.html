@@ -9,7 +9,7 @@
   </head>
   <body>
     <main class="flex justify-center items-center flex-col">
-      <section class="w-full max-w-[1600px]">
+      <section class="w-full" style="max-width: clamp(1200px, 1000vw, 1920px)">
         <nav class="flex justify-between items-center">
           <a href="/">
             <h1
@@ -20,23 +20,514 @@
             </h1>
           </a>
           <div class="flex gap-1 items-center">
-            <button
-              class="LoginButtonNav Gilroy-Medium px-10 py-3 rounded-full cursor-pointer border-[0.5px] border-[#eeeeee] hover:scale-105 transition-all duration-300 active:scale-95"
-              style="box-shadow: 0px 4px 12px rgb(250, 250, 250)"
-            >
-              Login
-            </button>
+            <a href="./login/login.html">
+              <button
+                class="LoginButtonNav Gilroy-Medium px-10 py-3 rounded-full cursor-pointer border-[0.5px] border-[#dddddd] hover:bg-[#f9f9f9] border-opacity-95 hover:scale-105 transition-all duration-300 active:scale-95"
+              >
+                Login
+              </button>
+            </a>
             <button
               class="p-3 bg-[#3a86ff] rounded-full cursor-pointer hover:scale-105 transition-all duration-300 active:scale-95"
               id="openMenuButton"
-            ></button>
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6 text-slate-50"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            </button>
           </div>
         </nav>
         <div
-          class="NavigationMenu absolute right-0 h-auto border-opacity-5 border-[#3d3d3d] bg-white z-50 p-6 mt-[0.10rem] rounded-[16px] w-full max-w-[350px] shadow-xl box-border hidden"
+          class="NavigationMenu absolute right-10 h-auto border-[0.5px] border-[#eeeeee] bg-white z-50 p-6 mt-[0.10rem] rounded-[16px] w-full max-w-[350px] shadow-xl box-border hidden"
           id="NavigationMenuWrapper"
         >
+          <nav
+            class="hiddenNavMenu hidden flex justify-between items-center mb-7 p-2"
+          >
+            <h1
+              class="Gilroy-Semibold"
+              style="font-size: clamp(25px, 10vw, 50px)"
+            >
+              clamp
+            </h1>
+            <button
+              class="p-3 bg-[#3a86ff] rounded-full cursor-pointer hover:scale-105 transition-all duration-300 active:scale-95"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6 text-slate-50"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            </button>
+          </nav>
           <div class="flex flex-col gap-2" id="NavigationMenu"></div>
+          <button
+            class="hidden hiddenNavLoginButton Gilroy-Medium w-full bg-[#3a86ff] text-white my-4 px-7 py-3 gap-2 rounded-[16px] cursor-pointer border-[0.5px] border-[#dddddd] border-opacity-95 hover:scale-105 transition-all duration-300 active:scale-99"
+          >
+            Login
+          </button>
+        </div>
+        <div class="h-[90dvh] flex flex-col justify-center items-start">
+          <h1
+            class="Gilroy-Bold text-[75px] text-[#1b1b1b] text-balance uppercase"
+            style="
+              font-size: clamp(23px, 15vw, 155px);
+              line-height: clamp(55px, 13vw, 125px);
+            "
+          >
+            You <span class="text-[#3a86ff]">Dream</span> It,
+            <br />
+            We Code It
+          </h1>
+          <p
+            class="Gilroy-Regular text-[15px] text-[#999999] w-full max-w-[768px] pl-[10px]"
+            style="font-size: clamp(12px, 3.5vw, 35px)"
+          >
+            Clamp, we scale with you - scaling made easy.
+          </p>
+          <div class="flex gap-4 items-center my-5">
+            <button
+              class="flex bg-[#111111] text-white px-7 py-3 items-center gap-2 cursor-pointer rounded-[16px] hover:gap-4 active:scale-90 duration-300 ease-in-out"
+              style="font-size: clamp(10px, 3.5vw, 15px)"
+            >
+              Explore
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                />
+              </svg>
+            </button>
+            <button
+              class="Gilroy-Medium flex px-7 py-3 gap-2 rounded-[16px] cursor-pointer border-[0.5px] border-[#dddddd] hover:bg-[#f9f9f9] border-opacity-95 hover:scale-105 transition-all duration-300 active:scale-95"
+              style="font-size: clamp(10px, 3.5vw, 15px)"
+            >
+              Book us now
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div>
+          <div>
+            <nav class="flex flex-col items-center gap-4 text-center">
+              <h1
+                class="Gilroy-Bold text-[#0d0d0d] leading-[30px]"
+                style="font-size: clamp(30px, 5vw, 45px)"
+              >
+                Find a plan that suits your needs
+              </h1>
+              <p
+                class="Gilroy-Regular text-[#999999] text-[15px] text-center"
+                style="
+                  font-size: clamp(15px, 2.5vw, 25px);
+                  line-height: clamp(12px, 3vw, 30px);
+                "
+              >
+                If you're unsure, feel free to contact us, and we'll be happy to
+                assist you.
+              </p>
+            </nav>
+            <div class="flex justify-center items-center my-6">
+              <div class="bg-[#D7D7D7] rounded-full p-[4.5px] flex">
+                <button
+                  class="Gilroy-Semibold cursor-pointer text-[15px] bg-[#ffffff] rounded-full px-3 py-1"
+                >
+                  Monthly
+                </button>
+                <button
+                  class="Gilroy-Semibold cursor-pointer text-[15px] rounded-full px-3 py-1"
+                >
+                  Yearly
+                </button>
+              </div>
+            </div>
+            <div class="PricingCardsWrapper flex gap-5">
+              <div
+                class="flex flex-col items-start my-10 border-[2px] h-auto w-full border-opacity-25 border-[#eeeeee] p-6 py-14 rounded-[28px] hover:border-[#3a86ff] duration-150 ease-in-out hover:border-[4px]"
+              >
+                <nav>
+                  <h1
+                    class="Gilroy-Semibold text-[#0d0d0d] leading-[25px]"
+                    style="font-size: clamp(40px, 5vw, 45px)"
+                  >
+                    Low
+                  </h1>
+                  <p
+                    class="Gilroy-Regular text-[#999999] text-[15px] leading-[20px] mt-2"
+                  >
+                    For easy projects
+                  </p>
+                </nav>
+                <div
+                  class="flex flex-col justify-center items-center w-full my-4"
+                >
+                  <h1
+                    class="Gilroy-Semibold text-center text-[#0d0d0d] leading-[25px] py-[55px]"
+                    style="
+                      font-size: clamp(25px, 5vw, 35px);
+                      padding-top: clamp(25px, 5vw, 55px);
+                      padding-bottom: clamp(25px, 5vw, 35px);
+                    "
+                  >
+                    NOK 1000
+                  </h1>
+                  <div class="w-full">
+                    <button
+                      class="w-full bg-[#0d0d0d] text-[#ffffff] hover:bg-[#1b1b1b] hover:text-[#dddddd] rounded-[16px] px-3 py-2 cursor-pointer"
+                    >
+                      Get Started
+                    </button>
+                  </div>
+                </div>
+                <div class="mt-10 flex flex-col gap-3">
+                  <div class="flex gap-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m4.5 12.75 6 6 9-13.5"
+                      />
+                    </svg>
+                    <p>Something</p>
+                  </div>
+                  <div class="flex gap-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m4.5 12.75 6 6 9-13.5"
+                      />
+                    </svg>
+                    <p>Something</p>
+                  </div>
+                  <div class="flex gap-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m4.5 12.75 6 6 9-13.5"
+                      />
+                    </svg>
+                    <p>Something</p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex flex-col items-start my-10 border-[2px] h-auto w-full border-opacity-25 border-[#eeeeee] p-6 py-14 rounded-[28px] hover:border-[#3a86ff] duration-150 ease-in-out hover:border-[4px]"
+              >
+                <nav>
+                  <h1
+                    class="Gilroy-Semibold text-[#0d0d0d] leading-[25px]"
+                    style="font-size: clamp(40px, 5vw, 45px)"
+                  >
+                    Low
+                  </h1>
+                  <p
+                    class="Gilroy-Regular text-[#999999] text-[15px] leading-[20px] mt-2"
+                  >
+                    For easy projects
+                  </p>
+                </nav>
+                <div
+                  class="flex flex-col justify-center items-center w-full my-4"
+                >
+                  <h1
+                    class="Gilroy-Semibold text-center text-[#0d0d0d] leading-[25px] py-[55px]"
+                    style="
+                      font-size: clamp(25px, 5vw, 35px);
+                      padding-top: clamp(25px, 5vw, 55px);
+                      padding-bottom: clamp(25px, 5vw, 35px);
+                    "
+                  >
+                    NOK 1000
+                  </h1>
+                  <div class="w-full">
+                    <button
+                      class="w-full bg-[#0d0d0d] text-[#ffffff] hover:bg-[#1b1b1b] hover:text-[#dddddd] rounded-[16px] px-3 py-2 cursor-pointer"
+                    >
+                      Get Started
+                    </button>
+                  </div>
+                </div>
+                <div class="mt-10 flex flex-col gap-3">
+                  <div class="flex gap-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m4.5 12.75 6 6 9-13.5"
+                      />
+                    </svg>
+                    <p>Something</p>
+                  </div>
+                  <div class="flex gap-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m4.5 12.75 6 6 9-13.5"
+                      />
+                    </svg>
+                    <p>Something</p>
+                  </div>
+                  <div class="flex gap-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m4.5 12.75 6 6 9-13.5"
+                      />
+                    </svg>
+                    <p>Something</p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex flex-col items-start my-10 border-[2px] h-auto w-full border-opacity-25 border-[#eeeeee] p-6 py-14 rounded-[28px] hover:border-[#3a86ff] duration-150 ease-in-out hover:border-[4px]"
+              >
+                <nav>
+                  <h1
+                    class="Gilroy-Semibold text-[#0d0d0d] leading-[25px]"
+                    style="font-size: clamp(40px, 5vw, 45px)"
+                  >
+                    Low
+                  </h1>
+                  <p
+                    class="Gilroy-Regular text-[#999999] text-[15px] leading-[20px] mt-2"
+                  >
+                    For easy projects
+                  </p>
+                </nav>
+                <div
+                  class="flex flex-col justify-center items-center w-full my-4"
+                >
+                  <h1
+                    class="Gilroy-Semibold text-center text-[#0d0d0d] leading-[25px] py-[55px]"
+                    style="
+                      font-size: clamp(25px, 5vw, 35px);
+                      padding-top: clamp(25px, 5vw, 55px);
+                      padding-bottom: clamp(25px, 5vw, 35px);
+                    "
+                  >
+                    NOK 1000
+                  </h1>
+                  <div class="w-full">
+                    <button
+                      class="w-full bg-[#0d0d0d] text-[#ffffff] hover:bg-[#1b1b1b] hover:text-[#dddddd] rounded-[16px] px-3 py-2 cursor-pointer"
+                    >
+                      Get Started
+                    </button>
+                  </div>
+                </div>
+                <div class="mt-10 flex flex-col gap-3">
+                  <div class="flex gap-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m4.5 12.75 6 6 9-13.5"
+                      />
+                    </svg>
+                    <p>Something</p>
+                  </div>
+                  <div class="flex gap-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m4.5 12.75 6 6 9-13.5"
+                      />
+                    </svg>
+                    <p>Something</p>
+                  </div>
+                  <div class="flex gap-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m4.5 12.75 6 6 9-13.5"
+                      />
+                    </svg>
+                    <p>Something</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="FAQSection py-[150px]">
+          <div class="FAQSectionWrapper">
+            <nav class="my-10">
+              <h1
+                class="Gilroy-Semibold text-[#0d0d0d]"
+                style="font-size: clamp(25px, 5vw, 45px)"
+              >
+                Frequently Asked Questions
+              </h1>
+              <p
+                class="Gilroy-Regular text-[#999999] text-[15px] leading-[10px] mt-2"
+              >
+                Common questions
+              </p>
+            </nav>
+            <div class="flex flex-col">
+              <div class="border-t-[1px] border-[#eeeeee] py-10">
+                <h1
+                  class="Gilroy-Semibold text-[#0d0d0d] text-[25px]"
+                  style="font-size: clamp(20px, 5vw, 30px)"
+                >
+                  Question one
+                </h1>
+                <p
+                  class="Gilroy-Regular text-[#999999] text-[15px] mt-2 w-full max-w-[1078px] text-balance"
+                  style="font-size: clamp(12px, 2.5vw, 18px)"
+                >
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Aspernatur quod repellat nostrum doloribus! Nam soluta
+                  delectus ducimus ut aut nemo fugiat dolore, quos officia dolor
+                  eaque
+                </p>
+              </div>
+              <div class="border-t-[1px] border-[#eeeeee] py-10">
+                <h1
+                  class="Gilroy-Semibold text-[#0d0d0d] text-[25px]"
+                  style="font-size: clamp(20px, 5vw, 30px)"
+                >
+                  Question two
+                </h1>
+                <p
+                  class="Gilroy-Regular text-[#999999] text-[15px] mt-2 w-full max-w-[1078px] text-balance"
+                  style="font-size: clamp(12px, 2.5vw, 18px)"
+                >
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Aspernatur quod recusandae ab. Accusantium quaerat amet minima
+                  fugiat. Neque quaerat qui repellat nostrum doloribus! Nam
+                  soluta delectus
+                </p>
+              </div>
+              <div class="border-t-[1px] border-[#eeeeee] py-10">
+                <h1
+                  class="Gilroy-Semibold text-[#0d0d0d] text-[25px]"
+                  style="font-size: clamp(20px, 5vw, 30px)"
+                >
+                  Question three
+                </h1>
+                <p
+                  class="Gilroy-Regular text-[#999999] text-[15px] mt-2 w-full max-w-[1078px] text-balance"
+                  style="font-size: clamp(12px, 2.5vw, 18px)"
+                >
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Aspernatur quod recusandae ab. Accusantium quaerat amet minima
+                  fugiat. Neque quaerat qui repellat nostrum doloribus! Nam
+                  soluta delectus ducimus ut
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
