@@ -1,7 +1,6 @@
 body {
   overflow-x: hidden;
   background-color: #ffffff;
-  padding: clamp(25px, 2vw + 20px, 50px);
   opacity: 0;
   animation: fadeIn 0.5s ease-in-out forwards;
 }
@@ -73,7 +72,7 @@ html {
     display: none;
   }
 
-  .hiddenNavLoginButton {
+  .navigationMenuButton {
     display: block;
   }
 
@@ -83,6 +82,7 @@ html {
 
   .PricingCardsWrapper {
     flex-direction: column;
+    
   }
 }
 @media screen and (max-width: 768px) {
@@ -95,6 +95,10 @@ html {
     top: 0;
     height: 100dvh;
     padding: 20px;
+  }
+
+  .footer-footer {
+    flex-direction: column;
   }
 }
 

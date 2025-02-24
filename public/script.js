@@ -23,6 +23,26 @@ navigationMenu.innerHTML = links
   )
   .join("");
 
+// Kode for footer menu lenker
+const footerLinks = [
+  { name: "About", href: "#" },
+  { name: "Work", href: "#" },
+  { name: "Contact", href: "#" },
+  { name: "Terms of Service", href: "#" },
+  { name: "Privacy Policy", href: "#" },
+];
+
+const footerMenu = document.getElementById("footerMenu");
+footerMenu.innerHTML = footerLinks
+  .map(
+    (link) => `
+    <a class="hover:-translate-y-2 hover:underline duration-150 ease-in-out" href="${link.href}">
+        <p class="Gilroy-Regular text-[18px]">${link.name}</p>
+    </a>
+`
+  )
+  .join("");
+
 // ... eksisterende kode ...
 const openMenuButton = document.getElementById("openMenuButton");
 const navigationMenuWrapper = document.getElementById("NavigationMenuWrapper");
