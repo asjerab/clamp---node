@@ -10,6 +10,51 @@
   <body>
     <main class="flex justify-center items-center flex-col">
       <section class="w-full">
+        <div class="navigationMenu" id="MobileNavigationMenu">
+          <nav class="flex flex-col justify-between">
+            <div class="flex justify-between items-center">
+              <h1
+                class="Gilroy-Semibold"
+                style="font-size: clamp(25px, 10vw, 50px)"
+              >
+                clamp
+              </h1>
+              <button id="CloseMenuButton">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-7"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18 18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="my-5" id="NavigationMenu"></div>
+          </nav>
+          <div>
+            <a href="./Contact/index.html">
+              <button
+                class="Gilroy-Semibold mt-5 cursor-pointer rounded-[8px] text-slate-50 p-3 w-full bg-[#3a86ff] hover:scale-101 transition-all duration-150 active:scale-95"
+              >
+                Contact us
+              </button>
+            </a>
+            <a href="./login/login.html">
+              <button
+                class="Gilroy-Semibold mt-2 cursor-pointer rounded-[8px] text-[#111111] p-3 w-full border-[0.5px] border-[#dddddd] hover:scale-101 transition-all duration-150 active:scale-95"
+              >
+                Login
+              </button>
+            </a>
+          </div>
+        </div>
         <nav
           class="flex justify-between items-center p-[35px] w-full max-w-[1300px] mx-auto"
         >
@@ -24,17 +69,17 @@
           <div class="flex gap-5 items-center">
             <div class="flex gap-5 items-center LoginButtonNav">
               <a
-                href=""
+                href="./About/index.html"
                 class="Gilroy-Medium text-[18px] hover:scale-105 duration-300 active:scale-95"
                 >About us</a
               >
               <a
-                href=""
+                href="./Project/index.html"
                 class="Gilroy-Medium text-[18px] hover:scale-105 duration-300 active:scale-95"
                 >Work</a
               >
               <a
-                href=""
+                href="./Contact/index.html"
                 class="Gilroy-Medium text-[18px] hover:scale-105 duration-300 active:scale-95"
                 >Contact</a
               >
@@ -47,14 +92,17 @@
                   Login
                 </button>
               </a>
-              <button class="hidden navigationMenuButton">
+              <button
+                class="hidden navigationMenuButton cursor-pointer"
+                id="OpenMenuButton"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="size-6"
+                  class="size-7"
                 >
                   <path
                     stroke-linecap="round"
@@ -110,7 +158,7 @@
               </button>
             </a>
             <button
-              class="Gilroy-Medium flex px-7 py-3 gap-2 rounded-[16px] cursor-pointer border-[0.5px] border-[#dddddd] hover:bg-[#f9f9f9] border-opacity-95 hover:scale-105 transition-all duration-300 active:scale-95"
+              class="Gilroy-Medium flex items-center px-7 py-3 gap-2 rounded-[16px] cursor-pointer border-[0.5px] border-[#dddddd] hover:bg-[#f9f9f9] border-opacity-95 hover:scale-105 transition-all duration-300 active:scale-95"
               style="font-size: clamp(10px, 3vw, 15px)"
             >
               Book us now
@@ -445,7 +493,7 @@
         <div
           class="FAQSection py-[150px] p-[35px] w-full max-w-[1300px] mx-auto"
         >
-          <div class="FAQSectionWrapper">
+          <div class="FAQSectionWrapper my-10">
             <nav class="my-10">
               <h1
                 class="Gilroy-Semibold text-[#0d0d0d]"
