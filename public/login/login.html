@@ -15,7 +15,7 @@
             <div class="flex justify-between items-center">
               <h1
                 class="Gilroy-Semibold"
-                style="font-size: clamp(25px, 10vw, 50px)"
+                style="font-size: clamp(35px, 10vw, 50px)"
               >
                 clamp
               </h1>
@@ -56,12 +56,12 @@
           </div>
         </div>
         <nav
-          class="flex justify-between items-center p-[35px] w-full max-w-[1300px] mx-auto"
+          class="flex justify-between items-center p-[35px] w-full max-w-[1400px] mx-auto"
         >
           <a href="/">
             <h1
               class="Gilroy-Semibold"
-              style="font-size: clamp(25px, 10vw, 50px)"
+              style="font-size: clamp(35px, 10vw, 50px)"
             >
               clamp
             </h1>
@@ -144,33 +144,39 @@
           </button>
         </div>
         <div
-          class="flex justify-center items-center h-[calc(85vh-100px)] p-[35px]"
+          class="flex justify-center items-center min-h-[calc(85vh-100px)] p-[35px] w-full"
         >
-          <form action="" class="w-full max-w-[500px]">
+          <form action="" class="w-full max-w-[500px] mx-auto">
             <div class="flex flex-col gap-2">
               <h1
-                class="Gilroy-Semibold my-5"
+                class="Gilroy-Semibold my-5 text-balance"
                 style="font-size: clamp(25px, 5vw, 35px)"
               >
                 Login
               </h1>
-              <label class="Gilroy-Semibold">Username</label>
+              <label class="Gilroy-Semibold text-[14px] md:text-[16px]"
+                >Username</label
+              >
               <input
-                class="Gilroy-Semibold border-[0.5px] border-[#dddddd] p-3 rounded-[8px] focus:border-[#3a86ff] focus:border-[3px] outline-none transition-all duration-200"
+                class="Gilroy-Semibold border-[2px] border-[#dddddd] p-3 rounded-[8px] focus:border-[#3a86ff] focus:border-[3px] outline-none transition-all duration-200"
                 type="text"
               />
-              <label class="Gilroy-Semibold mt-5">Password</label>
+              <label class="Gilroy-Semibold mt-5 text-[14px] md:text-[16px]"
+                >Password</label
+              >
               <input
-                class="Gilroy-Semibold border-[0.5px] border-[#dddddd] p-3 rounded-[8px] focus:border-[#3a86ff] focus:border-[3px] outline-none transition-all duration-200"
+                class="Gilroy-Semibold border-[2px] border-[#dddddd] p-3 rounded-[8px] focus:border-[#3a86ff] focus:border-[3px] outline-none transition-all duration-200"
                 type="password"
               />
               <div class="flex justify-end">
-                <button class="Gilroy-Medium hover:underline cursor-pointer">
+                <button
+                  class="Gilroy-Medium hover:underline cursor-pointer text-[14px] md:text-[16px] text-[#3a86ff]"
+                >
                   Forgot password
                 </button>
               </div>
               <button
-                class="Gilroy-Semibold mt-5 cursor-pointer rounded-[8px] text-slate-50 p-3 w-full bg-[#3a86ff] hover:scale-101 transition-all duration-150 active:scale-95"
+                class="Gilroy-Semibold mt-5 cursor-pointer rounded-[8px] text-slate-50 p-3 w-full bg-[#3a86ff] hover:scale-[1.01] transition-all duration-150 active:scale-95 text-[14px] md:text-[16px]"
               >
                 Login
               </button>
@@ -208,20 +214,20 @@
             class="footer-footer flex justify-between items-center w-full max-w-[1378px] mx-auto"
           >
             <p
-              class="Gilroy-Regular text-[#111111] text-[17px] hover:translate-y-[-3px] duration-100 ease-in-out cursor-pointer"
+              class="Gilroy-Medium text-[#111111] text-[17px] hover:translate-y-[-3px] duration-100 ease-in-out cursor-pointer"
             >
               © clamp 2024. All rights reserved.
             </p>
             <p
-              class="Gilroy-Regular text-[#111111] text-[18px] hover:translate-y-[-3px] duration-100 ease-in-out cursor-pointer"
+              class="Gilroy-Medium text-[#111111] text-[18px] hover:translate-y-[-3px] duration-100 ease-in-out cursor-pointer"
             >
-              Placeholder
+              Clamp, we scale with you - scaling made easy.
             </p>
           </div>
         </footer>
       </section>
     </main>
 
-    <script src="../script.js"></script>
+    <script src="../universal.js"></script>
   </body>
 </html>
