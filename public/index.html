@@ -9,38 +9,348 @@
   </head>
   <body>
     <main class="flex justify-center items-center flex-col">
-      <section class="w-full max-w-[1600px]">
-        <nav class="flex justify-between items-center">
+      <section class="w-full">
+        <div class="navigationMenu" id="MobileNavigationMenu">
+          <nav class="flex flex-col justify-between">
+            <div class="flex justify-between items-center">
+              <h1
+                class="Gilroy-Semibold"
+                style="font-size: clamp(35px, 10vw, 50px)"
+              >
+                clamp
+              </h1>
+              <button id="CloseMenuButton">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-7"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18 18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="my-5" id="NavigationMenu"></div>
+          </nav>
+          <div>
+            <a href="./Contact/index.html">
+              <button
+                class="Gilroy-Semibold mt-5 cursor-pointer rounded-[8px] text-slate-50 p-3 w-full bg-[#3a86ff] hover:scale-101 transition-all duration-150 active:scale-95"
+              >
+                Contact us
+              </button>
+            </a>
+            <a href="./login/login.html">
+              <button
+                class="Gilroy-Semibold mt-2 cursor-pointer rounded-[8px] text-[#111111] p-3 w-full border-[0.5px] border-[#dddddd] hover:scale-101 transition-all duration-150 active:scale-95"
+              >
+                Login
+              </button>
+            </a>
+          </div>
+        </div>
+        <nav
+          class="flex justify-between items-center p-[35px] w-full max-w-[1400px] mx-auto"
+        >
           <a href="/">
             <h1
               class="Gilroy-Semibold"
-              style="font-size: clamp(25px, 10vw, 50px)"
+              style="font-size: clamp(35px, 10vw, 50px)"
             >
               clamp
             </h1>
           </a>
-          <div class="flex gap-1 items-center">
-            <button
-              class="LoginButtonNav Gilroy-Medium px-10 py-3 rounded-full cursor-pointer border-[0.5px] border-[#eeeeee] hover:scale-105 transition-all duration-300 active:scale-95"
-              style="box-shadow: 0px 4px 12px rgb(250, 250, 250)"
-            >
-              Login
-            </button>
-            <button
-              class="p-3 bg-[#3a86ff] rounded-full cursor-pointer hover:scale-105 transition-all duration-300 active:scale-95"
-              id="openMenuButton"
-            ></button>
+          <div class="flex gap-5 items-center">
+            <div class="flex gap-5 items-center LoginButtonNav">
+              <a
+                href="./About"
+                class="Gilroy-Medium text-[18px] hover:scale-105 duration-300 active:scale-95"
+                >About us</a
+              >
+              <a
+                href="./Project"
+                class="Gilroy-Medium text-[18px] hover:scale-105 duration-300 active:scale-95"
+                >Projects</a
+              >
+              <a
+                href="./Contact"
+                class="Gilroy-Medium text-[18px] hover:scale-105 duration-300 active:scale-95"
+                >Contact</a
+              >
+            </div>
+            <div class="flex gap-2 items-center">
+              <a href="./login">
+                <button
+                  class="LoginButtonNav Gilroy-Medium px-10 py-3 rounded-[16px] cursor-pointer border-[0.5px] border-[#dddddd] hover:bg-[#f9f9f9] border-opacity-95 hover:scale-105 transition-all duration-300 active:scale-95"
+                >
+                  Login
+                </button>
+              </a>
+              <button
+                class="hidden navigationMenuButton cursor-pointer"
+                id="OpenMenuButton"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-7"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 9h16.5m-16.5 6.75h16.5"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
         </nav>
         <div
-          class="NavigationMenu absolute right-0 h-auto border-opacity-5 border-[#3d3d3d] bg-white z-50 p-6 mt-[0.10rem] rounded-[16px] w-full max-w-[350px] shadow-xl box-border hidden"
-          id="NavigationMenuWrapper"
+          class="h-[90dvh] flex flex-col justify-center items-start p-[35px] w-full max-w-[1400px] mx-auto"
         >
-          <div class="flex flex-col gap-2" id="NavigationMenu"></div>
+          <h1
+            class="Gilroy-Bold text-[75px] text-[#1b1b1b] text-balance uppercase"
+            style="
+              font-size: clamp(23px, 15vw, 155px);
+              line-height: clamp(55px, 13vw, 125px);
+            "
+          >
+            You <span class="text-[#3a86ff]">Dream</span> It,
+            <br />
+            We Code It
+          </h1>
+          <p
+            class="Gilroy-Regular text-[15px] text-[#999999] w-full max-w-[768px] pl-[10px]"
+            style="font-size: clamp(12px, 3.5vw, 35px)"
+          >
+            Clamp, we scale with you - scaling made easy.
+          </p>
+          <div class="flex gap-4 items-center my-5">
+            <a href="#pricingSection">
+              <button
+                class="flex bg-[#111111] text-white px-7 py-3 items-center gap-2 cursor-pointer rounded-[16px] hover:gap-4 active:scale-90 duration-300 ease-in-out"
+                style="font-size: clamp(10px, 3vw, 15px)"
+              >
+                Explore
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                  />
+                </svg>
+              </button>
+            </a>
+            <button
+              class="Gilroy-Medium flex items-center px-7 py-3 gap-2 rounded-[16px] cursor-pointer border-[0.5px] border-[#dddddd] hover:bg-[#f9f9f9] border-opacity-95 hover:scale-105 transition-all duration-300 active:scale-95"
+              style="font-size: clamp(10px, 3vw, 15px)"
+            >
+              Book us now
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
+        <div>
+          <div class="w-full max-w-[1400px] mx-auto" id="pricingSection">
+            <nav class="flex flex-col items-center gap-4 text-center p-[35px]">
+              <h1
+                class="Gilroy-Bold text-[#0d0d0d] leading-[30px]"
+                style="font-size: clamp(30px, 5vw, 45px)"
+              >
+                Find a plan that suits your needs
+              </h1>
+              <p
+                class="Gilroy-Regular text-[#999999] text-[15px] text-center"
+                style="
+                  font-size: clamp(15px, 2.5vw, 25px);
+                  line-height: clamp(12px, 3vw, 30px);
+                "
+              >
+                If you're unsure, feel free to contact us, and we'll be happy to
+                assist you.
+              </p>
+            </nav>
+            <div class="flex justify-center items-center my-6">
+              <div
+                class="bg-[#D7D7D7] rounded-full p-[4.5px] flex duration-150 ease-in-out"
+              >
+                <button
+                  class="Gilroy-Semibold cursor-pointer text-[15px] bg-[#ffffff] rounded-full px-3 py-1 duration-150 ease-in-out"
+                  id="CompletePackageButton"
+                >
+                  Complete Package
+                </button>
+                <button
+                  class="Gilroy-Semibold cursor-pointer text-[15px] rounded-full px-3 py-1 duration-150 ease-in-out"
+                  id="ManagedSolutionButton"
+                >
+                  Managed Solution
+                </button>
+              </div>
+            </div>
+            <div
+              class="PricingCardsWrapper flex flex-col justify-between items-center"
+            >
+              <div
+                id="pricingMenu"
+                class="PricingCardsWrapper w-full flex justify-between gap-3 my-10 p-[35px] duration-150 ease-in-out"
+              ></div>
+              <div
+                id="pricingMenuTwo"
+                class="PricingCardsWrapper w-full flex justify-between gap-3 my-10 p-[35px] hidden duration-150 ease-in-out"
+              ></div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="FAQSection py-[150px] p-[35px] w-full max-w-[1400px] mx-auto"
+        >
+          <div class="FAQSectionWrapper my-10" id="FAQSection">
+            <nav class="my-10">
+              <h1
+                class="Gilroy-Semibold text-[#0d0d0d]"
+                style="font-size: clamp(22px, 5vw, 45px)"
+              >
+                Frequently Asked Questions
+              </h1>
+              <p
+                class="Gilroy-Regular text-[#999999] text-[15px] leading-[10px] mt-2"
+              >
+                Common questions
+              </p>
+            </nav>
+            <div class="flex flex-col">
+              <div class="border-t-[1px] border-[#eeeeee] py-10">
+                <h1
+                  class="Gilroy-Semibold text-[#0d0d0d] text-[25px]"
+                  style="font-size: clamp(20px, 5vw, 30px)"
+                >
+                  Question one
+                </h1>
+                <p
+                  class="Gilroy-Regular text-[#999999] text-[15px] mt-2 w-full max-w-[1078px] text-balance"
+                  style="font-size: clamp(12px, 2.5vw, 18px)"
+                >
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Aspernatur quod repellat nostrum doloribus! Nam soluta
+                  delectus ducimus ut aut nemo fugiat dolore, quos officia dolor
+                  eaque
+                </p>
+              </div>
+              <div class="border-t-[1px] border-[#eeeeee] py-10">
+                <h1
+                  class="Gilroy-Semibold text-[#0d0d0d] text-[25px]"
+                  style="font-size: clamp(20px, 5vw, 30px)"
+                >
+                  Question two
+                </h1>
+                <p
+                  class="Gilroy-Regular text-[#999999] text-[15px] mt-2 w-full max-w-[1078px] text-balance"
+                  style="font-size: clamp(12px, 2.5vw, 18px)"
+                >
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Aspernatur quod recusandae ab. Accusantium quaerat amet minima
+                  fugiat. Neque quaerat qui repellat nostrum doloribus! Nam
+                  soluta delectus
+                </p>
+              </div>
+              <div class="border-t-[1px] border-[#eeeeee] py-10">
+                <h1
+                  class="Gilroy-Semibold text-[#0d0d0d] text-[25px]"
+                  style="font-size: clamp(20px, 5vw, 30px)"
+                >
+                  Question three
+                </h1>
+                <p
+                  class="Gilroy-Regular text-[#999999] text-[15px] mt-2 w-full max-w-[1078px] text-balance"
+                  style="font-size: clamp(12px, 2.5vw, 18px)"
+                >
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Aspernatur quod recusandae ab. Accusantium quaerat amet minima
+                  fugiat. Neque quaerat qui repellat nostrum doloribus! Nam
+                  soluta delectus ducimus ut
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="w-full h-auto p-5 bg-[#f1f1f1] py-[75px]">
+          <nav class="flex flex-col justify-center items-center items-center">
+            <h1
+              class="Gilroy-Semibold shalom-footer font-semibold text-[#0d0d0d] flex flex-col p-0 m-0 text-[100px]"
+            >
+              clamp
+            </h1>
+            <div class="flex items-center gap-3 my-3">
+              <button
+                class="px-3 py-2 rounded-[16px] bg-[#111111] text-slate-50 Gilroy-Regular cursor-pointer hover:scale-105 active:scale-90 duration-300 ease-in-out"
+              >
+                contact
+              </button>
+              <a href="./#FAQSection">
+                <button
+                  class="px-3 py-2 rounded-[16px] bg-[#ffffff] cursor-pointer border-[0.5px] border-[#dddddd] hover:bg-[#f9f9f9] border-opacity-95 hover:scale-105 transition-all duration-300 active:scale-95"
+                >
+                  FAQ
+                </button>
+              </a>
+            </div>
+            <div
+              class="flex justify-center gap-5 flex-wrap my-5"
+              id="footerMenu"
+            ></div>
+          </nav>
+          <hr
+            class="my-5 border-[#dddddd] border-opacity-25 mx-auto w-full max-w-[1378px]"
+          />
+          <div
+            class="footer-footer flex justify-between items-center w-full max-w-[1378px] mx-auto"
+          >
+            <p
+              class="Gilroy-Medium text-[#111111] text-[17px] hover:translate-y-[-3px] duration-100 ease-in-out cursor-pointer"
+            >
+              © clamp 2024. All rights reserved.
+            </p>
+            <p
+              class="Gilroy-Medium text-[#111111] text-center text-[18px] hover:translate-y-[-3px] duration-100 ease-in-out cursor-pointer"
+            >
+              Clamp, we scale with you - scaling made easy.
+            </p>
+          </div>
+        </footer>
       </section>
     </main>
 
-    <script src="./script.js"></script>
+    <script src="./universal.js"></script>
+    <script src="./index.js"></script>
   </body>
 </html>

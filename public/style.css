@@ -1,7 +1,20 @@
 body {
   overflow-x: hidden;
   background-color: #ffffff;
-  padding: 35px;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+  box-sizing: border-box;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 html {
@@ -55,13 +68,53 @@ html {
   font-family: "Gilroy-BoldItalic";
 }
 
+.navigationMenu {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100dvh;
+  padding: 35px;
+  background-color: #ffffff;
+  width: 100%;
+  z-index: 100;
+}
 
 @media screen and (max-width: 1024px) {
   .LoginButtonNav {
     display: none;
   }
+
+  .navigationMenuButton {
+    display: block;
+  }
+
+  .hiddenNavMenu {
+    display: flex;
+  }
+
+  .PricingCardsWrapper {
+    flex-direction: column;
+    
+  }
 }
 @media screen and (max-width: 768px) {
 }
 @media screen and (max-width: 480px) {
+  .NavigationMenu {
+    width: 100%;
+    max-width: 100%;
+    right: 0;
+    top: 0;
+    height: 100dvh;
+    padding: 20px;
+  }
+
+  .footer-footer {
+    flex-direction: column;
+  }
+}
+
+.LoginButtonNavHidden {
+  display: none;
 }
