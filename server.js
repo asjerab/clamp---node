@@ -29,5 +29,10 @@ app.get('/', (req, res) => {
 app.get('/login', (req, res) => {
     res.sendFile(__dirname + "/public/login/login.html");
 });
+
+// Serve the index.html file
+app.get('/Dashboard', (req, res) => {
+    res.sendFile(__dirname + "/public/Dashboard/index.html");
+});
  
 app.use(express.static("public"));

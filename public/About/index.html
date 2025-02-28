@@ -3,11 +3,302 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/public/style.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <title>About us</title>
   </head>
   <body>
-    <h1>About us page</h1>
-    <script src="/public/script.js"></script>
+    <main>
+      <section>
+        <div class="navigationMenu" id="MobileNavigationMenu">
+          <nav class="flex flex-col justify-between">
+            <div class="flex justify-between items-center">
+              <h1
+                class="Gilroy-Semibold"
+                style="font-size: clamp(35px, 10vw, 50px)"
+              >
+                clamp
+              </h1>
+              <button id="CloseMenuButton">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-7"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18 18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="my-5" id="NavigationMenu"></div>
+          </nav>
+          <div>
+            <a href="./Contact/index.html">
+              <button
+                class="Gilroy-Semibold mt-5 cursor-pointer rounded-[8px] text-slate-50 p-3 w-full bg-[#3a86ff] hover:scale-101 transition-all duration-150 active:scale-95"
+              >
+                Contact us
+              </button>
+            </a>
+            <a href="./login/login.html">
+              <button
+                class="Gilroy-Semibold mt-2 cursor-pointer rounded-[8px] text-[#111111] p-3 w-full border-[0.5px] border-[#dddddd] hover:scale-101 transition-all duration-150 active:scale-95"
+              >
+                Login
+              </button>
+            </a>
+          </div>
+        </div>
+        <nav
+          class="flex justify-between items-center p-[35px] w-full max-w-[1400px] mx-auto"
+        >
+          <a href="/">
+            <h1
+              class="Gilroy-Semibold"
+              style="font-size: clamp(35px, 10vw, 50px)"
+            >
+              clamp
+            </h1>
+          </a>
+          <div class="flex gap-5 items-center">
+            <div class="flex gap-5 items-center LoginButtonNav">
+              <a
+                href="./About"
+                class="Gilroy-Medium text-[18px] hover:scale-105 duration-300 active:scale-95"
+                >About us</a
+              >
+              <a
+                href="./Project"
+                class="Gilroy-Medium text-[18px] hover:scale-105 duration-300 active:scale-95"
+                >Projects</a
+              >
+              <a
+                href="./Contact"
+                class="Gilroy-Medium text-[18px] hover:scale-105 duration-300 active:scale-95"
+                >Contact</a
+              >
+            </div>
+            <div class="flex gap-2 items-center">
+              <a href="./login">
+                <button
+                  class="LoginButtonNav Gilroy-Medium px-10 py-3 rounded-[16px] cursor-pointer border-[0.5px] border-[#dddddd] hover:bg-[#f9f9f9] border-opacity-95 hover:scale-105 transition-all duration-300 active:scale-95"
+                >
+                  Login
+                </button>
+              </a>
+              <button
+                class="hidden navigationMenuButton cursor-pointer"
+                id="OpenMenuButton"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-7"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 9h16.5m-16.5 6.75h16.5"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </nav>
+        <div class="px-[35px]">
+          <div
+            class="w-full max-w-[1350px] mx-auto"
+            style="
+              padding-top: clamp(25px, 5vw, 100px);
+              padding-bottom: clamp(25px, 5vw, 100px);
+            "
+          >
+            <nav>
+              <h1
+                class="Gilroy-Semibold text-[#0d0d0d] text-balance w-full"
+                style="
+                  font-size: clamp(25px, 9vw, 100px);
+                  padding-top: clamp(25px, 5vw, 100px);
+                "
+              >
+                Welcome to Clamp
+              </h1>
+              <p
+                class="Gilroy-Regular py-5 text-balance [#999999] w-full max-w-[1250px] pt-3"
+                style="
+                  padding-bottom: clamp(25px, 5vw, 100px);
+                  font-size: clamp(15px, 5vw, 25px);
+                "
+              >
+                We’re Clamp – a two-person team. One of us is a front-end
+                developer and designer, and the other handles back-end
+                development and Drift. We’re passionate about creating websites
+                that not only look great but actually work well. For us, it’s
+                all about making the web more functional and beautiful, one
+                project at a time.
+              </p>
+            </nav>
+            <div class="mt-[50px]">
+              <div>
+                <h1
+                  class="Gilroy-Semibold text-[#0d0d0d] text-balance text-[25px] pb-4"
+                >
+                  Meet the team
+                </h1>
+              </div>
+              <nav>
+                <div class="flex gap-5 flex-wrap">
+                  <div
+                    id="asjer-card"
+                    class="team-card flex justify-between items-center gap-5 w-full max-w-[500px] h-auto p-6 bg-[#E8E8E8] border-2 rounded-[8px] duration-150 ease-in-out border-[#3a86ff] cursor-pointer"
+                    data-member="Asjer"
+                  >
+                    <div class="flex items-center gap-5">
+                      <div
+                        class="relative w-10 h-10 rounded-full overflow-hidden bg-gray-200"
+                      >
+                        <img
+                          width="100"
+                          height="100"
+                          src="https://github.com/asjerab.png"
+                          alt="Asjer About Profile img"
+                          class="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div>
+                        <h1
+                          class="Gilroy-Semibold leading-5 text-[#0d0d0d] text-[20px]"
+                        >
+                          Asjer Bereket
+                        </h1>
+                        <p class="Gilroy-Medium text-[#0d0d0d] text-[16px]">
+                          Front-end Dev, Designer
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    id="timur-card"
+                    class="team-card flex justify-between items-center gap-5 w-full max-w-[500px] h-auto p-6 bg-[#E8E8E8] border-2 rounded-[8px] duration-150 ease-in-out border-none cursor-pointer"
+                    data-member="Timur"
+                  >
+                    <div class="flex items-center gap-5">
+                      <div
+                        class="relative w-10 h-10 rounded-full overflow-hidden bg-gray-200"
+                      >
+                        <img
+                          width="100"
+                          height="100"
+                          src="https://github.com/tigua002.png"
+                          alt="Timur About Profile img"
+                          class="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div>
+                        <h1
+                          class="Gilroy-Semibold leading-5 text-[#0d0d0d] text-[20px]"
+                        >
+                          Timur Gusarov
+                        </h1>
+                        <p class="Gilroy-Medium text-[#0d0d0d] text-[16px]">
+                          Back-end Dev, Drift-operator
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+            <div class="mt-10">
+              <div id="member-description-container">
+                <p
+                  id="asjer-description"
+                  class="Gilroy-Regular text-[25px] text-[#0d0d0d]"
+                >
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Cumque porro deserunt illo eligendi minus architecto,
+                  laboriosam dolor provident perferendis maiores sed voluptatum
+                  saepe repudiandae eos aspernatur placeat cum nesciunt commodi
+                  eum sapiente iusto. Beatae ipsa accusantium eligendi vel
+                  laborum expedita rerum, libero velit quis nemo debitis illum
+                  sapiente eum unde natus quisquam, nisi nam cupiditate ad.
+                  Explicabo magnam obcaecati esse labore deleniti voluptatem,
+                </p>
+                <p
+                  id="timur-description"
+                  class="Gilroy-Regular text-[25px] text-[#0d0d0d] hidden"
+                >
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Cumque porro deserunt illo eligendi minus architecto,
+                  laboriosam dolor provident perferendis maiores sed voluptatum
+                  saepe repudiandae eos aspernatur placeat cum nesciunt commodi
+                  eum sapiente iusto. Beatae ipsa accusantium eligendi vel
+                  laborum expedita rerum, libero velit quis nemo debitis illum
+                  sapiente eum unde natus quisquam, nisi nam cupiditate ad.
+                  Explicabo magnam obcaecati esse labore deleniti voluptatem,ad.
+                  Explicabo magnam obcaecati esse labore deleniti voluptatem,
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="w-full h-auto p-5 bg-[#f1f1f1] py-[75px] mt-[100px]">
+          <nav class="flex flex-col justify-center items-center items-center">
+            <h1
+              class="Gilroy-Semibold shalom-footer font-semibold text-[#0d0d0d] flex flex-col p-0 m-0 text-[100px]"
+            >
+              clamp
+            </h1>
+            <div class="flex items-center gap-3 my-3">
+              <button
+                class="px-3 py-2 rounded-[16px] bg-[#111111] text-slate-50 Gilroy-Regular cursor-pointer hover:scale-105 active:scale-90 duration-300 ease-in-out"
+              >
+                contact
+              </button>
+              <a href="./#FAQSection">
+                <button
+                  class="px-3 py-2 rounded-[16px] bg-[#ffffff] cursor-pointer border-[0.5px] border-[#dddddd] hover:bg-[#f9f9f9] border-opacity-95 hover:scale-105 transition-all duration-300 active:scale-95"
+                >
+                  FAQ
+                </button>
+              </a>
+            </div>
+            <div
+              class="flex justify-center gap-5 flex-wrap my-5"
+              id="footerMenu"
+            ></div>
+          </nav>
+          <hr
+            class="my-5 border-[#dddddd] border-opacity-25 mx-auto w-full max-w-[1378px]"
+          />
+          <div
+            class="footer-footer flex justify-between items-center w-full max-w-[1378px] mx-auto"
+          >
+            <p
+              class="Gilroy-Medium text-[#111111] text-[17px] hover:translate-y-[-3px] duration-100 ease-in-out cursor-pointer"
+            >
+              © clamp 2024. All rights reserved.
+            </p>
+            <p
+              class="Gilroy-Medium text-[#111111] text-center text-[18px] hover:translate-y-[-3px] duration-100 ease-in-out cursor-pointer"
+            >
+              Clamp, we scale with you - scaling made easy.
+            </p>
+          </div>
+        </footer>
+      </section>
+    </main>
+    <script src="./script.js"></script>
+    <script src="../universal.js"></script>
   </body>
 </html>
