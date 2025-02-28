@@ -3,11 +3,224 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/public/style.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <title>Projects</title>
   </head>
   <body>
-    <h1>Project page</h1>
-    <script src="/public/script.js"></script>
+    <main>
+      <section>
+        <div class="navigationMenu" id="MobileNavigationMenu">
+          <nav class="flex flex-col justify-between">
+            <div class="flex justify-between items-center">
+              <h1
+                class="Gilroy-Semibold"
+                style="font-size: clamp(35px, 10vw, 50px)"
+              >
+                clamp
+              </h1>
+              <button id="CloseMenuButton">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-7"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18 18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="my-5" id="NavigationMenu"></div>
+          </nav>
+          <div>
+            <a href="./Contact">
+              <button
+                class="Gilroy-Semibold mt-5 cursor-pointer rounded-[8px] text-slate-50 p-3 w-full bg-[#3a86ff] hover:scale-101 transition-all duration-150 active:scale-95"
+              >
+                Contact us
+              </button>
+            </a>
+            <a href="./login">
+              <button
+                class="Gilroy-Semibold mt-2 cursor-pointer rounded-[8px] text-[#111111] p-3 w-full border-[0.5px] border-[#dddddd] hover:scale-101 transition-all duration-150 active:scale-95"
+              >
+                Login
+              </button>
+            </a>
+          </div>
+        </div>
+        <nav
+          class="flex justify-between items-center p-[35px] w-full max-w-[1400px] mx-auto"
+        >
+          <a href="/">
+            <h1
+              class="Gilroy-Semibold"
+              style="font-size: clamp(35px, 10vw, 50px)"
+            >
+              clamp
+            </h1>
+          </a>
+          <div class="flex gap-5 items-center">
+            <div class="flex gap-5 items-center LoginButtonNav">
+              <a
+                href="../About/"
+                class="Gilroy-Medium text-[18px] hover:scale-105 duration-300 active:scale-95"
+                >About us</a
+              >
+              <a
+                href="../Project"
+                class="Gilroy-Medium text-[18px] hover:scale-105 duration-300 active:scale-95"
+                >Projects</a
+              >
+              <a
+                href="../Contact/"
+                class="Gilroy-Medium text-[18px] hover:scale-105 duration-300 active:scale-95"
+                >Contact</a
+              >
+            </div>
+            <div class="flex gap-2 items-center">
+              <a href="../login">
+                <button
+                  class="LoginButtonNav Gilroy-Medium px-10 py-3 rounded-[16px] cursor-pointer border-[0.5px] border-[#dddddd] hover:bg-[#f9f9f9] border-opacity-95 hover:scale-105 transition-all duration-300 active:scale-95"
+                >
+                  Login
+                </button>
+              </a>
+              <button
+                class="hidden navigationMenuButton cursor-pointer"
+                id="OpenMenuButton"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-7"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 9h16.5m-16.5 6.75h16.5"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </nav>
+        <div class="p-[25px]">
+          <div
+            class="w-full max-w-[1200px] mx-auto"
+            style="
+              padding-top: clamp(25px, 5vw, 100px);
+              padding-bottom: clamp(25px, 5vw, 100px);
+            "
+          >
+            <nav>
+              <h1
+                class="Gilroy-Semibold text-[#0d0d0d] text-balance leading-[50px] w-full"
+                style="
+                  font-size: clamp(25px, 9vw, 100px);
+                  line-height: clamp(30px, 5vw, 50px);
+                  padding-top: clamp(25px, 5vw, 100px);
+                "
+              >
+                Our expertise
+              </h1>
+            </nav>
+          </div>
+
+          <div
+            class="filter-container w-full max-w-[1200px] mx-auto flex flex-col sm:flex-row justify-between items-start sm:items-center py-[50px] sm:py-[100px] gap-6 sm:gap-0"
+          >
+            <div class="w-full sm:w-auto">
+              <h1
+                class="Gilroy-Regular text-[#0d0d0d] text-[24px] sm:text-[30px] font-[600] leading-[30px] sm:leading-[50px]"
+                style="font-size: clamp(20px, 4vw, 30px)"
+              >
+                Filter
+              </h1>
+            </div>
+            <div class="flex flex-wrap gap-4 w-full sm:w-auto">
+              <button
+                data-filter="all"
+                class="filter-button primaryFontRegular py-2 px-4 sm:py-3 sm:px-6 border-[1px] border-[#E8E8E8] border-opacity-50 rounded-full bg-slate-50 text-black text-[14px] sm:text-[15px] hover:bg-[#f9f9f9] cursor-pointer hover:text-black"
+              >
+                All
+              </button>
+              <button
+                data-filter="asjer"
+                class="filter-button primaryFontRegular py-2 px-4 sm:py-3 sm:px-6 border-[1px] border-[#E8E8E8] border-opacity-50 rounded-full text-[#0d0d0d] text-[14px] sm:text-[15px] hover:bg-[#f9f9f9] cursor-pointer hover:text-black"
+              >
+                Asjer
+              </button>
+              <button
+                data-filter="timur"
+                class="filter-button primaryFontRegular py-2 px-4 sm:py-3 sm:px-6 border-[1px] border-[#E8E8E8] border-opacity-50 rounded-full text-[#0d0d0d] text-[14px] sm:text-[15px] hover:bg-[#f9f9f9] cursor-pointer hover:text-black"
+              >
+                Timur
+              </button>
+            </div>
+          </div>
+          <div
+            class="work-box-container w-full max-w-[1200px] mx-auto grid grid-cols-2 gap-10"
+          >
+            <!-- Projects will be dynamically inserted here by JavaScript -->
+          </div>
+        </div>
+        <footer class="w-full h-auto p-5 bg-[#f1f1f1] py-[75px] mt-[100px]">
+          <nav class="flex flex-col justify-center items-center items-center">
+            <h1
+              class="Gilroy-Semibold shalom-footer font-semibold text-[#0d0d0d] flex flex-col p-0 m-0 text-[100px]"
+            >
+              clamp
+            </h1>
+            <div class="flex items-center gap-3 my-3">
+              <button
+                class="px-3 py-2 rounded-[16px] bg-[#111111] text-slate-50 Gilroy-Regular cursor-pointer hover:scale-105 active:scale-90 duration-300 ease-in-out"
+              >
+                contact
+              </button>
+              <a href="./#FAQSection">
+                <button
+                  class="px-3 py-2 rounded-[16px] bg-[#ffffff] cursor-pointer border-[0.5px] border-[#dddddd] hover:bg-[#f9f9f9] border-opacity-95 hover:scale-105 transition-all duration-300 active:scale-95"
+                >
+                  FAQ
+                </button>
+              </a>
+            </div>
+            <div
+              class="flex justify-center gap-5 flex-wrap my-5"
+              id="footerMenu"
+            ></div>
+          </nav>
+          <hr
+            class="my-5 border-[#dddddd] border-opacity-25 mx-auto w-full max-w-[1378px]"
+          />
+          <div
+            class="footer-footer flex justify-between items-center w-full max-w-[1378px] mx-auto"
+          >
+            <p
+              class="Gilroy-Medium text-[#111111] text-[17px] hover:translate-y-[-3px] duration-100 ease-in-out cursor-pointer"
+            >
+              © clamp 2024. All rights reserved.
+            </p>
+            <p
+              class="Gilroy-Medium text-[#111111] text-center text-[18px] hover:translate-y-[-3px] duration-100 ease-in-out cursor-pointer"
+            >
+              Clamp, we scale with you - scaling made easy.
+            </p>
+          </div>
+        </footer>
+      </section>
+    </main>
+    <script src="../universal.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
