@@ -17,9 +17,9 @@ document.addEventListener('DOMContentLoaded', function() {
             const member = card.getAttribute('data-member');
             if (member === selectedMember) {
                 card.classList.remove('border-none');
-                card.classList.add('border-[#3a86ff]');
+                card.classList.add('border-[#3a74ff]');
             } else {
-                card.classList.remove('border-[#3a86ff]');
+                card.classList.remove('border-[#3a74ff]');
                 card.classList.add('border-none');
             }
         });
