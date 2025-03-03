@@ -55,7 +55,9 @@
         </div>
       </div>
       <section class="flex items-start">
-        <div class="w-full max-w-[300px] p-5 h-screen bg-[#f8f9fa] flex flex-col justify-between">
+        <div
+          class="w-full max-w-[300px] p-5 h-screen bg-[#f8f9fa] flex flex-col justify-between"
+        >
           <div>
             <nav class="flex items-center gap-2">
               <h1
@@ -69,11 +71,12 @@
             </nav>
             <div>
               <nav class="mt-10">
-                <h2 class="text-[#a9a9a9]">Main</h2>
+                <h2 class="text-[#a9a9a9] Gilroy-Semibold">Main</h2>
               </nav>
               <div class="mt-3 flex flex-col gap-3">
                 <button
                   class="flex items-center p-2.5 rounded-[8px] gap-3 cursor-pointer w-full hover:border-[#3a74ff] hover:border-2 hover:scale-101 transition-all duration-150 active:scale-95"
+                  onclick="openTab(event, 'Tab1')"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -81,39 +84,21 @@
                     viewBox="0 0 24 24"
                     stroke-width="1.5"
                     stroke="currentColor"
-                    class="size-5"
+                    class="size-6"
                   >
                     <path
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      d="M6 6.878V6a2.25 2.25 0 0 1 2.25-2.25h7.5A2.25 2.25 0 0 1 18 6v.878m-12 0c.235-.083.487-.128.75-.128h10.5c.263 0 .515.045.75.128m-12 0A2.25 2.25 0 0 0 4.5 9v.878m13.5-3A2.25 2.25 0 0 1 19.5 9v.878m0 0a2.246 2.246 0 0 0-.75-.128H5.25c-.263 0-.515.045-.75.128m15 0A2.25 2.25 0 0 1 21 12v6a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 18v-6c0-.98.626-1.813 1.5-2.122"
+                      d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z"
                     />
                   </svg>
-                  <h1 class="Gilroy-Medium leading-[0px]">Orders</h1>
+
+                  <h1 class="Gilroy-Medium leading-[0px]">Overview</h1>
                 </button>
 
                 <button
                   class="flex items-center p-2.5 rounded-[8px] gap-3 cursor-pointer w-full hover:border-[#3a74ff] hover:border-2 hover:scale-101 transition-all duration-150 active:scale-95"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="size-5"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M6 6.878V6a2.25 2.25 0 0 1 2.25-2.25h7.5A2.25 2.25 0 0 1 18 6v.878m-12 0c.235-.083.487-.128.75-.128h10.5c.263 0 .515.045.75.128m-12 0A2.25 2.25 0 0 0 4.5 9v.878m13.5-3A2.25 2.25 0 0 1 19.5 9v.878m0 0a2.246 2.246 0 0 0-.75-.128H5.25c-.263 0-.515.045-.75.128m15 0A2.25 2.25 0 0 1 21 12v6a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 18v-6c0-.98.626-1.813 1.5-2.122"
-                    />
-                  </svg>
-                  <h1 class="Gilroy-Medium leading-[0px]">Orders</h1>
-                </button>
-
-                <button
-                  class="flex items-center p-2.5 rounded-[8px] gap-3 cursor-pointer w-full hover:border-[#3a74ff] hover:border-2 hover:scale-101 transition-all duration-150 active:scale-95"
+                  onclick="openTab(event, 'Tab2')"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -140,47 +125,117 @@
             </div>
           </div>
         </div>
-        <nav
-          class="border-b-[1px] border-opacity-50 border-[#dddddd] w-full p-6.5 flex items-center justify-between"
-        >
-          <div class="Gilroy-Medium">Dashboard</div>
-          <div class="flex gap-5 items-center LoginButtonNav">
-            <a
-              href="./About"
-              class="Gilroy-Medium text-[15px] hover:scale-105 duration-300 active:scale-95"
-              >About us</a
-            >
-            <a
-              href="./Project"
-              class="Gilroy-Medium text-[15px] hover:scale-105 duration-300 active:scale-95"
-              >Projects</a
-            >
-            <a
-              href="./Contact"
-              class="Gilroy-Medium text-[15px] hover:scale-105 duration-300 active:scale-95"
-              >Contact</a
-            >
-          </div>
-          <button
-            class="hidden navigationMenuButton cursor-pointer"
-            id="OpenMenuButton"
+        <div class="flex flex-col w-full">
+          <nav
+            class="border-b-[1px] border-opacity-50 border-[#dddddd] w-full p-6.5 flex items-center justify-between"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="size-7"
+            <div class="Gilroy-Medium">Dashboard</div>
+            <div class="flex gap-5 items-center LoginButtonNav">
+              <a
+                href="/"
+                class="Gilroy-Medium text-[15px] hover:scale-105 duration-300 active:scale-95"
+                >Home</a
+              >
+              <a
+                href="./About"
+                class="Gilroy-Medium text-[15px] hover:scale-105 duration-300 active:scale-95"
+                >About us</a
+              >
+              <a
+                href="./Project"
+                class="Gilroy-Medium text-[15px] hover:scale-105 duration-300 active:scale-95"
+                >Projects</a
+              >
+              <a
+                href="./Contact"
+                class="Gilroy-Medium text-[15px] hover:scale-105 duration-300 active:scale-95"
+                >Contact</a
+              >
+            </div>
+            <button
+              class="hidden navigationMenuButton cursor-pointer"
+              id="OpenMenuButton"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3.75 9h16.5m-16.5 6.75h16.5"
-              />
-            </svg>
-          </button>
-        </nav>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-7"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 9h16.5m-16.5 6.75h16.5"
+                />
+              </svg>
+            </button>
+          </nav>
+          <div class="p-6.5">
+            <div id="Tab1" class="tabcontent">
+              <nav>
+                <h1 class="Gilroy-Semibold text-[#a9a9a9]">Overview</h1>
+              </nav>
+            </div>
+
+            <div id="Tab2" class="tabcontent">
+              <nav>
+                <h1 class="Gilroy-Semibold text-[#a9a9a9]">Orders</h1>
+              </nav>
+              <div
+                class="bg-[#ffffff] flex flex-col gap-1 p-3 mt-3 w-full max-w-[350px] rounded-[16px] cursor-pointer border-[0.5px] border-[#dddddd]"
+              >
+                <label for="" class="Gilroy-Semibold text-[#a9a9a9] text-[14px]"
+                  >Full name</label
+                >
+                <h1 class="Gilroy-Medium text-[13px]">Asjer Bereket</h1>
+                <label for="" class="Gilroy-Semibold text-[#a9a9a9] text-[14px]"
+                  >Organization/Company</label
+                >
+
+                <h1 class="Gilroy-Medium text-[13px]">
+                  Utiviklings- og kompetanseetaten
+                </h1>
+                <label for="" class="Gilroy-Semibold text-[#a9a9a9] text-[14px]"
+                  >Short desire</label
+                >
+
+                <p class="Gilroy-Medium text-[13px]">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Labore deleniti perferendis fugiat reprehenderit iste, illum
+                  quidem, libero officia harum neque accusamus doloribus
+                  corrupti qui ipsum.
+                </p>
+                <label
+                  for=""
+                  class="Gilroy-Semibold text-[#a9a9a9] text-[14px] mt-5"
+                  >Choosen plan</label
+                >
+                <p
+                  class="Gilroy-Medium text-slate-50 px-2 py-1 mt-0.5 bg-[#3a74ff] w-fit rounded-full text-[13px]"
+                >
+                  Standard
+                </p>
+                <label for="" class="Gilroy-Semibold text-[#a9a9a9] text-[14px]"
+                  >Contacting info</label
+                >
+                <div class="flex flex-wrap gap-1 mt-1">
+                  <p
+                    class="Gilroy-Medium text-slate-50 px-2 py-1 mt-0.5 bg-[#3a74ff] w-fit rounded-full text-[13px]"
+                  >
+                    asjer.bereket@uke.oslo.kommune.no
+                  </p>
+                  <p
+                    class="Gilroy-Medium text-slate-50 px-2 py-1 mt-0.5 bg-[#3a74ff] w-fit rounded-full text-[13px]"
+                  >
+                    45552727
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
       <footer class="w-full h-auto p-5 bg-[#f1f1f1] py-[75px]">
         <nav class="flex flex-col justify-center items-center items-center">
@@ -228,6 +283,7 @@
       </footer>
     </main>
 
+    <script src="../Dashboard/Dashboard.js"></script>
     <script src="../universal.js"></script>
   </body>
 </html>
