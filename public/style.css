@@ -6,6 +6,10 @@ body {
   box-sizing: border-box;
 }
 
+::selection {
+  background-color: #3a74ff;
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -25,7 +29,7 @@ html {
 
 @font-face {
   font-family: "Gilroy-Regular";
-  src: url(./fonts/Gilroy-Regular.ttf);
+  src: url(./assets/fonts/Gilroy-Regular.ttf);
 }
 
 .Gilroy-Regular {
@@ -34,7 +38,7 @@ html {
 
 @font-face {
   font-family: "Gilroy-Medium";
-  src: url(./fonts/Gilroy-Medium.ttf);
+  src: url(./assets/fonts/Gilroy-Medium.ttf);
 }
 
 .Gilroy-Medium {
@@ -43,7 +47,7 @@ html {
 
 @font-face {
   font-family: "Gilroy-Semibold";
-  src: url(./fonts/Gilroy-SemiBold.ttf);
+  src: url(./assets/fonts/Gilroy-SemiBold.ttf);
 }
 
 .Gilroy-Semibold {
@@ -52,7 +56,7 @@ html {
 
 @font-face {
   font-family: "Gilroy-Bold";
-  src: url(./fonts/Gilroy-Bold.ttf);
+  src: url(./assets/fonts/Gilroy-Bold.ttf);
 }
 
 .Gilroy-Bold {
@@ -61,7 +65,7 @@ html {
 
 @font-face {
   font-family: "Gilroy-BoldItalic";
-  src: url(./fonts/Gilroy-BlackItalic.ttf);
+  src: url(./assets/fonts/Gilroy-BlackItalic.ttf);
 }
 
 .Gilroy-BoldItalic {

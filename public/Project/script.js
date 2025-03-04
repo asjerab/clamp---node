@@ -73,9 +73,9 @@ function renderProjects() {
     const projectElement = document.createElement("div");
     projectElement.className = "w-full";
     projectElement.innerHTML = `
-      <div class="hover:-translate-y-2 duration-150 ease-in-out">
+      <div class="hover:-translate-y-2 hover:border-[#3a74ff] hover:rounded-[8px] hover:border-4 duration-150 ease-in-out">
         <img
-          class="w-full h-full cursor-pointer"
+          class="w-full h-full cursor-pointer rounded-[8px]"
           src="${project.image}"
           alt="${project.name}"
         />
