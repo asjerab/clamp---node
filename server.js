@@ -40,6 +40,8 @@ function isAuthenticated(req, res, next) {
     }
 }
 
+
+
 app.get('/', (req, res) => {
     res.sendFile(__dirname + "/public/index.html");
 });
@@ -76,7 +78,7 @@ app.get('/Dashboard', isAuthenticated, (req, res) => {
 });
 app.post('/getClampOrders', isAuthenticated, (req, res) => {
     connection.execute(
-        'SELECT firstname, lastname, company, Description, plan, email, phone FROM Orders',
+        'SELECT firstname, lastname, company, Description, plan, email, phone, date FROM Orders',
         (error, result, fields) => {
             if (error) {
                 console.error('Query error:', error);
@@ -86,6 +88,25 @@ app.post('/getClampOrders', isAuthenticated, (req, res) => {
             res.status(200).json(result);
         }
     );
+});
+
+
+
+app.get('/getLoggedInUser', isAuthenticated, (req, res) => {
+    if (req.session.user) {
+        res.status(200).json({ email: req.session.user.email });
+    } else {
+        res.status(401).json({ message: "Ingen bruker er logget inn" });
+    }
+});
+
+app.post('/logout', (req, res) => {
+    req.session.destroy((err) => {
+        if (err) {
+            return res.status(500).json({ message: "Kunne ikke logge ut", status: false });
+        }
+        res.status(200).json({ message: "Logget ut", status: true });
+    });
 });
 
 const PORT = process.env.PORT || 3000;
