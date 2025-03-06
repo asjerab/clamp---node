@@ -90,7 +90,7 @@ app.post('/getClampOrders', (req, res) => {
         return res.status(200).json({ message: "not auth"})
     }
     connection.execute(
-        'SELECT firstname, lastname, company, Description, plan, email, phone, date FROMClampCompany.Orders',
+        'SELECT firstname, lastname, company, Description, plan, email, phone, date FROM ClampCompany.Orders',
         (error, result, fields) => {
             if (error) {
                 console.error('Query error:', error);
