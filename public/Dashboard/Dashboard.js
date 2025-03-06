@@ -1,12 +1,3 @@
-fetch("/getLoggedInUser")
-  .then((response) => response.json())
-  .then((data) => {
-    if (data.email) {
-      document.getElementById("loggedInUser").textContent = `${data.email}`;
-    }
-  })
-  .catch((error) => console.error("Feil ved henting av bruker:", error));
-
 function openTab(evt, tabName) {
   var i, tabcontent, tablinks;
 
@@ -50,7 +41,14 @@ const loadOrders = async () => {
     });
     if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
     let response = await res.json();
-    document.getElementById("Tab2Content").innerHTML += response
+    let orders = response.result 
+    if (response.message == "not auth") {
+      console.log("Failed to load orders:");
+      window.location.assign("/login")
+      return;
+    }
+    document.getElementById("loggedInUser").textContent = response.email.email;
+    document.getElementById("Tab2Content").innerHTML += orders
       .map(
         (loadOrders, index) => `
 <div class="bg-[#ffffff] flex flex-col gap-1 p-3 mt-3 w-full max-w-[350px] rounded-[16px] cursor-pointer border-[0.5px] border-[#dddddd] hover:border-blue-500 hover:border-2 transition-all duration-150 ease-in-out">
@@ -86,7 +84,7 @@ const loadOrders = async () => {
       )
       .join("");
   } catch (error) {
-    console.error("Failed to load orders:", error);
+
     document.getElementById("Tab2Content").innerHTML =
       '<p class="Gilroy-Semibold mt-4 flex items-center gap-2 bg-[#da1e37] w-fit rounded-[8px] p-3 text-white"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">' +
       '<path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />' +

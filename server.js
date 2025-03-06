@@ -32,11 +32,10 @@ connection.connect((err) => {
 });
 
 function isAuthenticated(req, res, next) {
-    console.log("Session user:", req.session.user);
-    if (req.session.user) {
-        next();
+    if (req.session.user != undefined) {
+        return true
     } else {
-        res.sendFile(__dirname + "/public/login/login.html");
+        return false
     }
 }
 
@@ -73,10 +72,23 @@ app.post('/loginAdmin', (req, res) => {
     );
 });
 
-app.get('/Dashboard', isAuthenticated, (req, res) => {
+app.get('/dashboard', (req, res) => {
+    console.log("Is the user auth? "  + isAuthenticated(req));             
+    if (!isAuthenticated(req)){
+        res.redirect('/login')
+        return
+    }
     res.sendFile(__dirname + "/public/Dashboard/index.html");
 });
-app.post('/getClampOrders', isAuthenticated, (req, res) => {
+app.post('/getClampOrders', (req, res) => {
+    console.log("Session user:", req.session.user);
+    console.log("Is the user auth? "  + isAuthenticated(req));             
+    if (!isAuthenticated(req) == true){
+        console.log("redirect");
+
+        
+        return res.status(200).json({ message: "not auth"})
+    }
     connection.execute(
         'SELECT firstname, lastname, company, Description, plan, email, phone, date FROM Orders',
         (error, result, fields) => {
@@ -85,20 +97,14 @@ app.post('/getClampOrders', isAuthenticated, (req, res) => {
                 return res.status(500).json({ message: 'Database error', error });
             }
             console.log('Sending result:', result);
-            res.status(200).json(result);
+            res.status(200).json({email: req.session.user, result, message: "Success"});
         }
     );
 });
 
 
 
-app.get('/getLoggedInUser', isAuthenticated, (req, res) => {
-    if (req.session.user) {
-        res.status(200).json({ email: req.session.user.email });
-    } else {
-        res.status(401).json({ message: "Ingen bruker er logget inn" });
-    }
-});
+
 
 app.post('/logout', (req, res) => {
     req.session.destroy((err) => {
