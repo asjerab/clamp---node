@@ -53,7 +53,7 @@ app.post('/loginAdmin', (req, res) => {
     let user = req.body.mail;
     let password = md5(req.body.pass);
     connection.execute(
-        `SELECT email FROM user WHERE email = ? AND password = ?`, 
+        `SELECT email FROM ClampCompany.user WHERE email = ? AND password = ?`, 
         [user, password], 
         (err, request) => {
             if (err) {
@@ -90,7 +90,7 @@ app.post('/getClampOrders', (req, res) => {
         return res.status(200).json({ message: "not auth"})
     }
     connection.execute(
-        'SELECT firstname, lastname, company, Description, plan, email, phone, date FROM Orders',
+        'SELECT firstname, lastname, company, Description, plan, email, phone, date FROMClampCompany.Orders',
         (error, result, fields) => {
             if (error) {
                 console.error('Query error:', error);
