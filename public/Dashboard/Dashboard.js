@@ -22,13 +22,16 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-const escapeHTML = (str) =>
-  str
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#039;");
+const escapeHTML = (str) => {
+  if (str) {
+    return str
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+  }
+};
 
 const loadOrders = async () => {
   try {
@@ -41,10 +44,10 @@ const loadOrders = async () => {
     });
     if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
     let response = await res.json();
-    let orders = response.result 
+    let orders = response.result;
     if (response.message == "not auth") {
       console.log("Failed to load orders:");
-      window.location.assign("/login")
+      window.location.assign("/login");
       return;
     }
     document.getElementById("loggedInUser").textContent = response.email.email;
@@ -84,30 +87,30 @@ const loadOrders = async () => {
       )
       .join("");
   } catch (error) {
-
+    console.error(error);
     document.getElementById("Tab2Content").innerHTML =
       '<p class="Gilroy-Semibold mt-4 flex items-center gap-2 bg-[#da1e37] w-fit rounded-[8px] p-3 text-white"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">' +
       '<path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />' +
-      '</svg>' +
-      'Error loading orders. Try again later.</p>';
+      "</svg>" +
+      "Error loading orders. Try again later.</p>";
   }
 };
 loadOrders();
 
 async function handleLogout() {
-    try {
-        const response = await fetch('/logout', {
-            method: 'POST',
-        });
-        
-        const data = await response.json();
-        
-        if (data.status) {
-            window.location.href = '/login'; 
-        } else {
-            console.error('Kunne ikke logge ut');
-        }
-    } catch (error) {
-        console.error('Feil ved utlogging:', error);
+  try {
+    const response = await fetch("/logout", {
+      method: "POST",
+    });
+
+    const data = await response.json();
+
+    if (data.status) {
+      window.location.href = "/login";
+    } else {
+      console.error("Kunne ikke logge ut");
     }
+  } catch (error) {
+    console.error("Feil ved utlogging:", error);
+  }
 }
