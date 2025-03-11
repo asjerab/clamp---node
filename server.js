@@ -53,8 +53,8 @@ app.post('/loginAdmin', (req, res) => {
     let user = req.body.mail;
     let password = md5(req.body.pass);
     connection.execute(
-        `SELECT email FROM ClampCompany.user WHERE email = ? AND password = ?`, 
-        [user, password], 
+        `SELECT email FROM ClampCompany.user WHERE email = ? AND password = ?`,
+        [user, password],
         (err, request) => {
             if (err) {
                 console.error("Query error:", err);
@@ -73,21 +73,17 @@ app.post('/loginAdmin', (req, res) => {
 });
 
 app.get('/dashboard', (req, res) => {
-    console.log("Is the user auth? "  + isAuthenticated(req));             
-    if (!isAuthenticated(req)){
+    console.log("Is the user auth? " + isAuthenticated(req));
+    if (!isAuthenticated(req)) {
         res.redirect('/login')
         return
     }
     res.sendFile(__dirname + "/public/Dashboard/index.html");
 });
 app.post('/getClampOrders', (req, res) => {
-    console.log("Session user:", req.session.user);
-    console.log("Is the user auth? "  + isAuthenticated(req));             
-    if (!isAuthenticated(req) == true){
+    if (!isAuthenticated(req) == true) {
         console.log("redirect");
-
-        
-        return res.status(200).json({ message: "not auth"})
+        return res.status(200).json({ message: "not auth" })
     }
     connection.execute(
         'SELECT firstname, lastname, company, Description, plan, email, phone, date FROM ClampCompany.Orders',
@@ -97,7 +93,30 @@ app.post('/getClampOrders', (req, res) => {
                 return res.status(500).json({ message: 'Database error', error });
             }
             console.log('Sending result:', result);
-            res.status(200).json({email: req.session.user, result, message: "Success"});
+            res.status(200).json({ email: req.session.user, result, message: "Success" });
+        }
+    );
+});
+app.post('/sendOrder', (req, res) => {
+    console.log('Request body:', req.body);
+
+    // Validate input
+    const { first, last, comp, wish, plan, mail, Phone } = req.body;
+    /*     if (!first || !last || !comp || !wish || !plan || !mail || !Phone) {
+            return res.status(400).json({ message: 'Missing required fields' });
+        } */
+
+    connection.execute('INSERT INTO ClampCompany.Orders (firstname, lastname, company, Description, plan, email, phone) VALUES (?, ?, ?, ?, ?, ?, ?)', [first, last, comp, wish, plan, mail, Phone], (error, result, fields) => {
+            if (error) {
+                console.error('Query error:', error);
+                return res.status(500).json({ message: 'Database error', error });
+            }
+            console.log('Insert result:', result);
+            res.status(200).json({
+                email: req.session.user?.email || 'unknown',
+                result,
+                message: 'Success'
+            });
         }
     );
 });
