@@ -1,48 +1,47 @@
-
 // Kode for priskort
 const pricingCards = [
-    {
-      title: "Low",
-      type: "Basic",
-      price: "$500",
-      features: [
-        "1-5 pages (Home, About, Contact, etc.)",
-        "Basic design & responsiveness",
-        "SEO-friendly structure",
-        "Handover with full ownership",
-      ],
-    },
-    {
-      title: "Medium",
-      type: "Standard",
-      price: "$2000",
-      features: [
-        "5-15 pages with custom design",
-        "Basic design & responsiveness",
-        "Payment integration",
-        "User authentication & database setup",
-        "Handover with full ownership",
-      ],
-    },
-    {
-      title: "High",
-      type: "Advanced",
-      price: "$5000",
-      features: [
-        "Unlimited pages & custom UI/UX",
-        "API integrations, dashboards & more",
-        "Payment integration",
-        "Scalability & security enhancements",
-        "Handover with full ownership",
-      ],
-    },
-    // Legg til flere priskort her om nødvendig
-  ];
-  
-  const pricingMenu = document.getElementById("pricingMenu");
-  pricingMenu.innerHTML = pricingCards
-    .map(
-      (card) => `
+  {
+    title: "Low",
+    type: "Basic",
+    price: "$500",
+    features: [
+      "1-5 pages (Home, About, Contact, etc.)",
+      "Basic design & responsiveness",
+      "SEO-friendly structure",
+      "Handover with full ownership",
+    ],
+  },
+  {
+    title: "Medium",
+    type: "Standard",
+    price: "$2000",
+    features: [
+      "5-15 pages with custom design",
+      "Basic design & responsiveness",
+      "Payment integration",
+      "User authentication & database setup",
+      "Handover with full ownership",
+    ],
+  },
+  {
+    title: "High",
+    type: "Advanced",
+    price: "$5000",
+    features: [
+      "Unlimited pages & custom UI/UX",
+      "API integrations, dashboards & more",
+      "Payment integration",
+      "Scalability & security enhancements",
+      "Handover with full ownership",
+    ],
+  },
+  // Legg til flere priskort her om nødvendig
+];
+
+const pricingMenu = document.getElementById("pricingMenu");
+pricingMenu.innerHTML = pricingCards
+  .map(
+    (card) => `
       <div class="flex flex-col justify-between items-start border-2 h-auto min-h-96 w-full border-opacity-25 border-gray-200 p-6 md:p-8 rounded-3xl hover:border-blue-500 hover:border-4 transition-all duration-150 ease-in-out">
         <nav class="flex flex-col gap-3 md:gap-5 w-full">
           <h1 class="font-medium text-gray-900 leading-tight text-base md:text-lg border border-gray-200 rounded-full px-3 py-1 w-fit">
@@ -71,62 +70,62 @@ const pricingCards = [
           <h1 class="font-semibold text-gray-900 text-2xl md:text-3xl">
             ${card.price}
           </h1>
-          <button class="bg-gray-900 text-white hover:bg-gray-800 hover:text-gray-200 rounded-xl px-6 md:px-10 py-3 cursor-pointer transition-colors">
+          <button class="bg-gray-900 text-white hover:bg-gray-800 hover:text-gray-200 rounded-xl px-6 md:px-10 py-3 cursor-pointer transition-colors" onclick="updatePlan('${card.type}')">
             Get Started
           </button>
         </div>
       </div>
   `
-    )
-    .join("");
-  
-  // Kode for priskort two
-  const pricingCardsTwo = [
-    {
-      title: "Low",
-      type: "Look out",
-      price: "$20/Month",
-      features: [
-        "1-5 pages (Home, About, Contact, etc.)",
-        "Basic design & responsiveness",
-        "SEO-friendly structure",
-        "Handover with full ownership",
-      ],
-      specialFeature: "*Standard package included in the price",
-    },
-    {
-      title: "Medium",
-      type: "Management",
-      price: "$50/Month",
-      features: [
-        "5-15 pages with custom design",
-        "Basic design & responsiveness",
-        "Payment integration",
-        "User authentication & database setup",
-        "Handover with full ownership",
-      ],
-      specialFeature: "*Standard package included in the price",
-    },
-    {
-      title: "High",
-      type: "Overwatch",
-      price: "$200/Month",
-      features: [
-        "Unlimited pages & custom UI/UX",
-        "API integrations, dashboards & more",
-        "Payment integration",
-        "Scalability & security enhancements",
-        "Handover with full ownership",
-      ],
-      specialFeature: "*Advanced package included in the price",
-    },
-    // Legg til flere priskort her om nødvendig
-  ];
-  
-  const pricingMenuTwo = document.getElementById("pricingMenuTwo");
-  pricingMenuTwo.innerHTML = pricingCardsTwo
-    .map(
-      (card) => `
+  )
+  .join("");
+
+// Kode for priskort two
+const pricingCardsTwo = [
+  {
+    title: "Low",
+    type: "Look out",
+    price: "$20/Month",
+    features: [
+      "1-5 pages (Home, About, Contact, etc.)",
+      "Basic design & responsiveness",
+      "SEO-friendly structure",
+      "Handover with full ownership",
+    ],
+    specialFeature: "*Standard package included in the price",
+  },
+  {
+    title: "Medium",
+    type: "Management",
+    price: "$50/Month",
+    features: [
+      "5-15 pages with custom design",
+      "Basic design & responsiveness",
+      "Payment integration",
+      "User authentication & database setup",
+      "Handover with full ownership",
+    ],
+    specialFeature: "*Standard package included in the price",
+  },
+  {
+    title: "High",
+    type: "Overwatch",
+    price: "$200/Month",
+    features: [
+      "Unlimited pages & custom UI/UX",
+      "API integrations, dashboards & more",
+      "Payment integration",
+      "Scalability & security enhancements",
+      "Handover with full ownership",
+    ],
+    specialFeature: "*Advanced package included in the price",
+  },
+  // Legg til flere priskort her om nødvendig
+];
+
+const pricingMenuTwo = document.getElementById("pricingMenuTwo");
+pricingMenuTwo.innerHTML = pricingCardsTwo
+  .map(
+    (card) => `
       <div class="flex flex-col justify-between items-start border-2 h-auto min-h-96 w-full border-opacity-25 border-gray-200 p-6 md:p-8 rounded-3xl hover:border-blue-500 hover:border-4 transition-all duration-150 ease-in-out">
         <nav class="flex flex-col gap-3 md:gap-5 w-full">
           <h1 class="font-medium text-gray-900 leading-tight text-base md:text-lg border border-gray-200 rounded-full px-3 py-1 w-fit">
@@ -168,17 +167,23 @@ const pricingCards = [
           <h1 class="font-semibold text-gray-900 text-xl md:text-2xl">
             ${card.price}
           </h1>
-          <button class="bg-gray-900 text-white hover:bg-gray-800 hover:text-gray-200 rounded-xl px-6 md:px-10 py-3 cursor-pointer transition-colors">
+          <button class="bg-gray-900 text-white hover:bg-gray-800 hover:text-gray-200 rounded-xl px-6 md:px-10 py-3 cursor-pointer transition-colors" onclick="updatePlan('${card.type}')">
             Get Started
           </button>
         </div>
       </div>
   `
-    )
-    .join("");
+  )
+  .join("");
 
+function updatePlan(planType) {
+  // Lagre den valgte planen i localStorage
+  localStorage.setItem('selectedPlan', planType);
+  // Naviger til kontaktskjemaet
+  window.location.href = './Contact/index.html'; // Endre til riktig sti hvis nødvendig
+}
 
-    // Kode for priskort knapp
+// Kode for priskort knapp
 const ManagedSolutionButton = document.getElementById("ManagedSolutionButton");
 const CompletePackageButton = document.getElementById("CompletePackageButton");
 
@@ -199,4 +204,90 @@ CompletePackageButton.addEventListener("click", () => {
   pricingMenuTwo.style.display = "none";
   CompletePackageButton.className = activeButtonStyle;
   ManagedSolutionButton.className = inactiveButtonStyle;
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const FAQarray = [
+    {
+      FAQtitle: "Question One",
+      FAQsvg: `
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 duration-150 ease-in-out">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+        </svg>`,
+      FAQtext: `
+        <p class="Gilroy-Regular text-[#999999] text-[15px] mt-2 w-full max-w-[1078px] text-balance hidden duration-150 ease-in-out">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur quod repellat nostrum doloribus! Nam soluta delectus ducimus ut aut nemo fugiat dolore, quos officia dolor eaque
+        </p>
+      `,
+    },
+    {
+      FAQtitle: "Question Two",
+      FAQsvg: `
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 duration-150 ease-in-out">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+        </svg>`,
+      FAQtext: `
+        <p class="Gilroy-Regular text-[#999999] text-[15px] mt-2 w-full max-w-[1078px] text-balance hidden duration-150 ease-in-out">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur quod repellat nostrum doloribus! Nam soluta delectus ducimus ut aut nemo fugiat dolore, quos officia dolor eaque
+        </p>
+      `,
+    },
+    {
+      FAQtitle: "Question Three",
+      FAQsvg: `
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 duration-150 ease-in-out">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+        </svg>`,
+      FAQtext: `
+        <p class="Gilroy-Regular text-[#999999] text-[15px] mt-2 w-full max-w-[1078px] text-balance hidden duration-150 ease-in-out">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur quod repellat nostrum doloribus! Nam soluta delectus ducimus ut aut nemo fugiat dolore, quos officia dolor eaque
+        </p>
+      `,
+    },
+  ];
+
+  const FAQElements = document.getElementById("FaqElements");
+  FAQElements.innerHTML = FAQarray.map(
+    (info) => `
+    <div class="border-t-[1px] border-[#eeeeee] py-10 w-full max-w-[1400px]">
+      <nav class="flex items-center justify-between cursor-pointer" id="FAQnav">
+        <h1 class="Gilroy-Semibold text-[#0d0d0d] text-[25px]" style="font-size: clamp(20px, 5vw, 30px)">
+          ${info.FAQtitle}
+        </h1>
+        ${info.FAQsvg}
+      </nav>
+      ${info.FAQtext}
+    </div>
+  `
+  ).join("");
+
+  // Legg til klikk-hendelse for å vise/skjule svaret
+  FAQarray.forEach((info, index) => {
+    const faqNav = FAQElements.children[index].querySelector("nav");
+    const faqText = FAQElements.children[index].querySelector("p");
+
+    faqNav.addEventListener("click", () => {
+      if (faqText.style.display === "block") {
+        faqText.style.display = "none";
+        faqNav.querySelector("svg").style.rotate = "0deg";
+      } else {
+        faqText.style.display = "block";
+        faqNav.querySelector("svg").style.rotate = "135deg";
+      }
+    });
+  });
+
+  const FAQNav = document.getElementById("FAQnav");
+  const FAQhidden = document.getElementById("hiddenFAQ");
+  const FAQSvg = document.getElementById("FAQSvg");
+
+  FAQNav.addEventListener("click", () => {
+    if (FAQhidden.style.display == "block") {
+      FAQhidden.style.display = "none";
+      FAQSvg.style.rotate = "0deg";
+    } else {
+      FAQhidden.style.display = "block";
+      FAQSvg.style.rotate = "135deg";
+    }
+  });
 });
