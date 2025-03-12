@@ -249,7 +249,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const FAQElements = document.getElementById("FaqElements");
   FAQElements.innerHTML = FAQarray.map(
     (info) => `
-    <div class="border-t-[1px] border-[#eeeeee] py-10 w-full max-w-[1400px]">
+    <div class="border-t-[1px] border-[#eeeeee] py-10 w-full max-w-[1400px] hover:scale-[1.010] duration-150 ease-in-out">
       <nav class="flex items-center justify-between cursor-pointer" id="FAQnav">
         <h1 class="Gilroy-Semibold text-[#0d0d0d] text-[25px]" style="font-size: clamp(20px, 5vw, 30px)">
           ${info.FAQtitle}
