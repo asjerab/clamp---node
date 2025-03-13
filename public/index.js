@@ -188,9 +188,9 @@ const ManagedSolutionButton = document.getElementById("ManagedSolutionButton");
 const CompletePackageButton = document.getElementById("CompletePackageButton");
 
 const activeButtonStyle =
-  "Gilroy-Semibold cursor-pointer text-[15px] bg-[#ffffff] rounded-full px-3 py-1";
+  "Gilroy-Semibold cursor-pointer text-[8] bg-[#ffffff] rounded-full px-3 py-1";
 const inactiveButtonStyle =
-  "Gilroy-Semibold cursor-pointer text-[15px] rounded-full px-3 py-1";
+  "Gilroy-Semibold cursor-pointer text-[8] rounded-full px-3 py-1";
 
 ManagedSolutionButton.addEventListener("click", () => {
   pricingMenuTwo.style.display = "flex";
@@ -209,7 +209,7 @@ CompletePackageButton.addEventListener("click", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const FAQarray = [
     {
-      FAQtitle: "Question One",
+      FAQtitle: "How long does it take to build a website?",
       FAQsvg: `
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 duration-150 ease-in-out">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
@@ -221,7 +221,7 @@ document.addEventListener("DOMContentLoaded", () => {
       `,
     },
     {
-      FAQtitle: "Question Two",
+      FAQtitle: "Do you offer website hosting services?",
       FAQsvg: `
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 duration-150 ease-in-out">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
@@ -233,7 +233,7 @@ document.addEventListener("DOMContentLoaded", () => {
       `,
     },
     {
-      FAQtitle: "Question Three",
+      FAQtitle: "Can you help with future website updates or new features?",
       FAQsvg: `
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 duration-150 ease-in-out">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
@@ -250,8 +250,8 @@ document.addEventListener("DOMContentLoaded", () => {
   FAQElements.innerHTML = FAQarray.map(
     (info) => `
     <div class="border-t-[1px] border-[#eeeeee] py-10 w-full max-w-[1400px] hover:scale-[1.010] duration-150 ease-in-out">
-      <nav class="flex items-center justify-between cursor-pointer" id="FAQnav">
-        <h1 class="Gilroy-Semibold text-[#0d0d0d] text-[25px]" style="font-size: clamp(20px, 5vw, 30px)">
+      <nav class="flex items-start gap-5 justify-between cursor-pointer" id="FAQnav">
+        <h1 class="Gilroy-Semibold text-[#0d0d0d]" style="font-size: clamp(15px, 4.5vw, 30px)">
           ${info.FAQtitle}
         </h1>
         ${info.FAQsvg}

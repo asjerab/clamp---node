@@ -84,6 +84,15 @@ html {
   z-index: 100;
 }
 
+.ClampFlowerHoverEffect:hover .hoverFlower {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+.showFlower {
+  display: none;
+}
+
 @media screen and (max-width: 1024px) {
   .LoginButtonNav {
     display: none;
@@ -99,11 +108,20 @@ html {
 
   .PricingCardsWrapper {
     flex-direction: column;
-    
+  }
+
+  .showFlower {
+    display: flex;
+  }
+
+  .hiddenFlower {
+    display: none;
   }
 }
+
 @media screen and (max-width: 768px) {
 }
+
 @media screen and (max-width: 480px) {
   .NavigationMenu {
     width: 100%;

@@ -181,15 +181,50 @@
             </a>
           </div>
         </div>
-        <div>
+        <div class="flex flex-col gap-5 pb-[200px]" id="ClampIntroImg">
           <div
-            class="pb-[125px] w-full max-w-[1400px] mx-auto p-[35px]"
-            id="ClampIntroImg"
+            class="flex justify-between items-end w-full max-w-[1400px] p-[35px] mx-auto ClampFlowerHoverEffect"
           >
+            <div class="flex flex-col gap-4 items-start">
+              <nav class="flex justify-between w-full gap-5">
+                <h1
+                  class="Gilroy-Semibold tracking-[-0.1625rem] leading-[65px] mb-4"
+                  style="
+                    font-size: clamp(2rem, 5vw, 4.3rem);
+                    line-height: clamp(2rem, 5vw, 65px);
+                  "
+                >
+                  Young, Bold & <br />Building the feature
+                </h1>
+                <img
+                  class="hoverFlower w-full max-w-[80px] h-[80px] showFlower"
+                  src="./assets/images/Blured_Flower.png"
+                  alt="Blured flower image"
+                />
+              </nav>
+              <p
+                class="Gilroy-Medium w-full max-w-[59.9375rem] text-[#535353]"
+                style="font-size: clamp(13px, 3.6vw, 20px)"
+              >
+                Two young developers from Oslo, hungry to make our mark. We’re
+                not a big agency juggling a hundred clients—we’re just two
+                people who care way too much about getting it right. Your
+                website isn’t just another project to us—it’s our reputation,
+                our craft, and our chance to prove ourselves.
+              </p>
+              <img src="./assets/images/Arrow.png" alt="Arrow" />
+              <p
+                class="Gilroy-Medium text-[#111111]"
+                style="font-size: clamp(12px, 5vw, 20px)"
+              >
+                The only way to do great work is to love what you do. -
+                <span class="Gilroy-Semibold text-[#111111]">Steve Jobs</span>
+              </p>
+            </div>
             <img
-              src="./assets/images/ClampIntroImg.png"
-              alt="Clamp Intro Image"
-              class="hover:scale-[1.010] duration-150 ease-in-out"
+              class="hoverFlower w-full max-w-[368px] h-auto hiddenFlower"
+              src="./assets/images/Blured_Flower.png"
+              alt="Blured flower image"
             />
           </div>
         </div>
@@ -248,7 +283,7 @@
         <div class="w-full max-w-[1400px] mx-auto my-10">
           <div class="FAQSection flex flex-col items-start p-[35px]">
             <div
-              class="FAQSectionWrapper w-full max-w-[900px] my-20"
+              class="FAQSectionWrapper w-full max-w-[1000px] my-20"
               id="FAQSection"
             >
               <nav class="my-10">
@@ -266,6 +301,17 @@
               </nav>
               <div class="flex flex-col">
                 <div id="FaqElements"></div>
+                <div class="flex items-start flex-col gap-5 mt-10">
+                  <p class="Gilroy-Medium text-[#535353] text-[20px]">
+                    Do you have any further questions, or just want to get in
+                    touch with us? Feel free to contact us!
+                  </p>
+                  <button
+                    class="cursor-pointer bg-[#3a74ff] px-5 py-3 rounded-full Gilroy-Medium text-slate-50 hover:scale-90 active:scale-95 duration-150 ease-in-out"
+                  >
+                    Contact
+                  </button>
+                </div>
               </div>
             </div>
           </div>
