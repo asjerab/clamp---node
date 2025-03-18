@@ -70,7 +70,9 @@ pricingMenu.innerHTML = pricingCards
           <h1 class="font-semibold text-gray-900 text-2xl md:text-3xl">
             ${card.price}
           </h1>
-          <button class="bg-gray-900 text-white hover:bg-gray-800 hover:text-gray-200 rounded-xl px-6 md:px-10 py-3 cursor-pointer transition-colors" onclick="updatePlan('${card.type}')">
+          <button class="bg-gray-900 text-white hover:bg-gray-800 hover:text-gray-200 rounded-xl px-6 md:px-10 py-3 cursor-pointer transition-colors" onclick="updatePlan('${
+            card.type
+          }')">
             Get Started
           </button>
         </div>
@@ -167,7 +169,9 @@ pricingMenuTwo.innerHTML = pricingCardsTwo
           <h1 class="font-semibold text-gray-900 text-xl md:text-2xl">
             ${card.price}
           </h1>
-          <button class="bg-gray-900 text-white hover:bg-gray-800 hover:text-gray-200 rounded-xl px-6 md:px-10 py-3 cursor-pointer transition-colors" onclick="updatePlan('${card.type}')">
+          <button class="bg-gray-900 text-white hover:bg-gray-800 hover:text-gray-200 rounded-xl px-6 md:px-10 py-3 cursor-pointer transition-colors" onclick="updatePlan('${
+            card.type
+          }')">
             Get Started
           </button>
         </div>
@@ -178,9 +182,9 @@ pricingMenuTwo.innerHTML = pricingCardsTwo
 
 function updatePlan(planType) {
   // Lagre den valgte planen i localStorage
-  localStorage.setItem('selectedPlan', planType);
+  localStorage.setItem("selectedPlan", planType);
   // Naviger til kontaktskjemaet
-  window.location.href = './Contact/index.html'; // Endre til riktig sti hvis nødvendig
+  window.location.href = "./Contact/index.html"; // Endre til riktig sti hvis nødvendig
 }
 
 // Kode for priskort knapp
@@ -215,7 +219,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
         </svg>`,
       FAQtext: `
-        <p class="Gilroy-Regular text-[#999999] text-[15px] mt-2 w-full max-w-[1078px] text-balance hidden duration-150 ease-in-out">
+        <p class="Gilroy-Medium text-[#999999] text-[15px] mt-2 w-full max-w-[1078px] text-balance hidden duration-150 ease-in-out">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur quod repellat nostrum doloribus! Nam soluta delectus ducimus ut aut nemo fugiat dolore, quos officia dolor eaque
         </p>
       `,
@@ -227,19 +231,19 @@ document.addEventListener("DOMContentLoaded", () => {
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
         </svg>`,
       FAQtext: `
-        <p class="Gilroy-Regular text-[#999999] text-[15px] mt-2 w-full max-w-[1078px] text-balance hidden duration-150 ease-in-out">
+        <p class="Gilroy-Medium text-[#999999] text-[15px] mt-2 w-full max-w-[1078px] text-balance hidden duration-150 ease-in-out">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur quod repellat nostrum doloribus! Nam soluta delectus ducimus ut aut nemo fugiat dolore, quos officia dolor eaque
         </p>
       `,
     },
     {
-      FAQtitle: "Can you help with future website updates or new features?",
+      FAQtitle: "Future website updates or new features?",
       FAQsvg: `
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 duration-150 ease-in-out">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
         </svg>`,
       FAQtext: `
-        <p class="Gilroy-Regular text-[#999999] text-[15px] mt-2 w-full max-w-[1078px] text-balance hidden duration-150 ease-in-out">
+        <p class="Gilroy-Medium text-[#999999] text-[15px] mt-2 w-full max-w-[1078px] text-balance hidden duration-150 ease-in-out">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur quod repellat nostrum doloribus! Nam soluta delectus ducimus ut aut nemo fugiat dolore, quos officia dolor eaque
         </p>
       `,
@@ -289,5 +293,76 @@ document.addEventListener("DOMContentLoaded", () => {
       FAQhidden.style.display = "block";
       FAQSvg.style.rotate = "135deg";
     }
+  });
+});
+
+// Blur text effect hero
+function animateBlurText(elementId, options = {}) {
+  const {
+    delay = 100,
+    direction = "top",
+    wordSpacing = "0.25em", // Add word spacing
+  } = options;
+
+  const element = document.getElementById(elementId);
+  const content = element.innerHTML;
+
+  // Use a regular expression to split the content while preserving HTML tags
+  const parts = content.split(/(<[^>]+>|\s+)/);
+
+  element.innerHTML = "";
+
+  parts.forEach((part, index) => {
+    if (part.trim() === "") {
+      // Add a space between words
+      const space = document.createElement("span");
+      space.innerHTML = "&nbsp;";
+      space.style.display = "inline-block";
+      space.style.width = wordSpacing;
+      element.appendChild(space);
+      return;
+    }
+
+    if (part.startsWith("<")) {
+      // If it's an HTML tag, append it directly
+      element.innerHTML += part;
+    } else {
+      // If it's text content, wrap it in a span for animation
+      const span = document.createElement("span");
+      span.textContent = part;
+      span.className = `inline-block transition-all duration-1000 opacity-0 blur-sm ${
+        direction === "top" ? "translate-y-[-20px]" : "translate-y-[20px]"
+      }`;
+      span.style.transitionDelay = `${index * delay}ms`;
+
+      // Check if this is the "Dream" text and apply the correct color
+      if (part.toLowerCase() === "dream") {
+        span.style.color = "#3a74ff";
+      }
+
+      element.appendChild(span);
+    }
+  });
+
+  // Trigger animation after a short delay
+  setTimeout(() => {
+    element.querySelectorAll("span").forEach((span) => {
+      span.classList.remove(
+        "opacity-0",
+        "blur-sm",
+        "translate-y-[-20px]",
+        "translate-y-[20px]"
+      );
+      span.classList.add("opacity-100", "blur-0", "translate-y-0");
+    });
+  }, 100);
+}
+
+// Usage
+document.addEventListener("DOMContentLoaded", () => {
+  animateBlurText("animatedHeading", {
+    delay: 100,
+    direction: "top",
+    wordSpacing: "0.25em", // Adjust this value to increase or decrease word spacing
   });
 });

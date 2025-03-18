@@ -5,9 +5,10 @@ const RectangleImage = { src: "images/rectangle.jpg" };
 const projects = [
   {
     id: "asjer",
-    image: "../assets/images/Project-image-placeholder.png",
-    name: "Asjer Project 1",
+    image: "../assets/images/ShalomImgClampProjectspng.png",
+    name: "Shalom Oslo",
     year: "2024",
+    link: "https://Shalomoslo.com",
   },
   {
     id: "timur",
@@ -73,27 +74,29 @@ function renderProjects() {
     const projectElement = document.createElement("div");
     projectElement.className = "w-full";
     projectElement.innerHTML = `
-      <div class="hover:-translate-y-2 hover:border-[#3a74ff] hover:rounded-[8px] hover:border-4 duration-150 ease-in-out">
+    <a href="${project.link}" target="_blank">
+      <div class="hover:-translate-y-2  duration-150 ease-in-out">
         <img
-          class="w-full h-full cursor-pointer rounded-[8px]"
+          class="w-full h-full cursor-pointer rounded-[8px] hover:border-[#3a74ff]  hover:border-5"
           src="${project.image}"
           alt="${project.name}"
         />
       </div>
       <div class="flex justify-between items-center py-[15px] px-[10px]">
         <h1
-          class="Gilroy-Regular font-[600] text-[#0d0d0d]"
+          class="Gilroy-Medium font-[600] text-[#0d0d0d]"
           style="font-size: clamp(12px, 3.5vw, 25px)"
         >
           ${project.name}
         </h1>
         <p
-          class="Gilroy-Regular font-[400] text-[#999999]"
+          class="Gilroy-Medium font-[400] text-[#999999]"
           style="font-size: clamp(10px, 3.5vw, 15px)"
         >
           ${project.year}
         </p>
       </div>
+      </a>
     `;
     projectsContainer.appendChild(projectElement);
   });

@@ -28,12 +28,12 @@ html {
 /* Fonts being used throughout the website */
 
 @font-face {
-  font-family: "Gilroy-Regular";
-  src: url(./assets/fonts/Gilroy-Regular.ttf);
+  font-family: "Gilroy-Medium";
+  src: url(./assets/fonts/Gilroy-Medium.ttf);
 }
 
-.Gilroy-Regular {
-  font-family: "Gilroy-Regular";
+.Gilroy-Medium {
+  font-family: "Gilroy-Medium";
 }
 
 @font-face {
@@ -73,15 +73,14 @@ html {
 }
 
 .navigationMenu {
-  position: absolute;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100svh;
+  padding: 35px;
   display: none;
   flex-direction: column;
-  justify-content: space-between;
-  height: 100dvh;
-  padding: 35px;
   background-color: #ffffff;
-  width: 100%;
-  z-index: 100;
 }
 
 .ClampFlowerHoverEffect:hover .hoverFlower {
