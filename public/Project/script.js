@@ -13,26 +13,9 @@ const projects = [
   {
     id: "timur",
     image: "../assets/images/Project-image-placeholder.png",
-    name: "Timur Project 1",
+    name: "Dataspot",
     year: "2024",
-  },
-  {
-    id: "asjer",
-    image: "../assets/images/Project-image-placeholder.png",
-    name: "Asjer Project 2",
-    year: "2023",
-  },
-  {
-    id: "timur",
-    image: "../assets/images/Project-image-placeholder.png",
-    name: "Timur Project 2",
-    year: "2023",
-  },
-  {
-    id: "asjer",
-    image: "../assets/images/Project-image-placeholder.png",
-    name: "Asjer Project 3",
-    year: "2022",
+    link: "https://dataspot.gusarov.site/login/",
   },
 ];
 

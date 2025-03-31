@@ -14,7 +14,7 @@ const pricingCards = [
   {
     title: "Medium",
     type: "Standard",
-    price: "$2000",
+    price: "$1500",
     features: [
       "5-15 pages with custom design",
       "Basic design & responsiveness",
@@ -26,7 +26,7 @@ const pricingCards = [
   {
     title: "High",
     type: "Advanced",
-    price: "$5000",
+    price: "$4500",
     features: [
       "Unlimited pages & custom UI/UX",
       "API integrations, dashboards & more",
@@ -184,7 +184,7 @@ function updatePlan(planType) {
   // Lagre den valgte planen i localStorage
   localStorage.setItem("selectedPlan", planType);
   // Naviger til kontaktskjemaet
-  window.location.href = "./Contact/index.html"; // Endre til riktig sti hvis nødvendig
+  window.location.href = "./submit/"; // Endre til riktig sti hvis nødvendig
 }
 
 // Kode for priskort knapp
@@ -219,9 +219,8 @@ document.addEventListener("DOMContentLoaded", () => {
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
         </svg>`,
       FAQtext: `
-        <p class="Gilroy-Medium text-[#999999] text-[15px] mt-2 w-full max-w-[1078px] text-balance hidden duration-150 ease-in-out">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur quod repellat nostrum doloribus! Nam soluta delectus ducimus ut aut nemo fugiat dolore, quos officia dolor eaque
-        </p>
+        <p class="Gilroy-Medium text-[#999999] text-[17.5px] mt-2 w-full max-w-[1078px] text-balance hidden duration-150 ease-in-out">
+The time required to build a website depends on your chosen plan and the complexity of your site. As a team of two dedicated developers, we work closely with you to ensure your project meets your expectations. On average, a Basic plan takes about 2-3 weeks, a Standard plan takes 4-6 weeks, and an Advanced plan takes 7-8+ weeks.        </p>
       `,
     },
     {
@@ -231,9 +230,8 @@ document.addEventListener("DOMContentLoaded", () => {
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
         </svg>`,
       FAQtext: `
-        <p class="Gilroy-Medium text-[#999999] text-[15px] mt-2 w-full max-w-[1078px] text-balance hidden duration-150 ease-in-out">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur quod repellat nostrum doloribus! Nam soluta delectus ducimus ut aut nemo fugiat dolore, quos officia dolor eaque
-        </p>
+        <p class="Gilroy-Medium text-[#999999] text-[17.5px] mt-2 w-full max-w-[1078px] text-balance hidden duration-150 ease-in-out">
+Yes! Once we've finished building your site and you're happy with it, we'll help you find the perfect domain and take care of hosting for you. Hosting is included in every package, so you can sit back, relax, and enjoy your brand-new website!        </p>
       `,
     },
     {
@@ -243,9 +241,8 @@ document.addEventListener("DOMContentLoaded", () => {
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
         </svg>`,
       FAQtext: `
-        <p class="Gilroy-Medium text-[#999999] text-[15px] mt-2 w-full max-w-[1078px] text-balance hidden duration-150 ease-in-out">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur quod repellat nostrum doloribus! Nam soluta delectus ducimus ut aut nemo fugiat dolore, quos officia dolor eaque
-        </p>
+        <p class="Gilroy-Medium text-[#999999] text-[17.5px] mt-2 w-full max-w-[1078px] text-balance hidden duration-150 ease-in-out">
+Yes, we offer ongoing development and updates for your site, but this service is only available with our 'Managed Solution' package.        </p>
       `,
     },
   ];

@@ -1,155 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Hjem</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../style.css" />
-  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-  <title>Hjem</title>
-</head>
-
-<body>
-  <main class="flex justify-center items-center flex-col">
-    <section class="w-full">
-      <div class="navigationMenu" id="MobileNavigationMenu">
-        <nav class="flex flex-col justify-between">
-          <div class="flex justify-between items-center">
-            <h1 class="Gilroy-Semibold" style="font-size: clamp(35px, 10vw, 50px)">
-              clamp
-            </h1>
-            <button title="CloseMenuButton" type="button" id="CloseMenuButton">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="size-7">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-          <div class="my-5" id="NavigationMenu"></div>
-        </nav>
-        <div>
-          <a href="./Contact/index.html">
-            <button
-              class="Gilroy-Semibold mt-5 cursor-pointer rounded-[8px] text-slate-50 p-3 w-full bg-[#3a74ff] hover:scale-101 transition-all duration-150 active:scale-95">
-              Contact us
-            </button>
-          </a>
-          <a href="./login/login.html">
-            <button
-              class="Gilroy-Semibold mt-2 cursor-pointer rounded-[8px] text-[#111111] p-3 w-full border-[0.5px] border-[#dddddd] hover:scale-101 transition-all duration-150 active:scale-95">
-              Login
-            </button>
-          </a>
-        </div>
-      </div>
-      <nav class="flex justify-between items-center p-[35px] w-full max-w-[1400px] mx-auto">
-        <a href="/">
-          <h1 class="Gilroy-Semibold" style="font-size: clamp(35px, 10vw, 50px)">
-            clamp
-          </h1>
-        </a>
-        <div class="flex gap-5 items-center">
-          <div class="flex gap-5 items-center LoginButtonNav">
-            <a href="../About/index.html"
-              class="Gilroy-Medium text-[18px] hover:scale-105 duration-300 active:scale-95">About us</a>
-            <a href="../Project/index.html"
-              class="Gilroy-Medium text-[18px] hover:scale-105 duration-300 active:scale-95">Work</a>
-            <a href="../Contact/index.html"
-              class="Gilroy-Medium text-[18px] hover:scale-105 duration-300 active:scale-95">Contact</a>
-          </div>
-          <div class="flex gap-2 items-center">
-            <button class="hidden navigationMenuButton" id="OpenMenuButton">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="size-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </nav>
-      <div
-        class="NavigationMenu absolute right-10 h-auto border-[0.5px] border-[#eeeeee] bg-white z-50 p-6 mt-[0.10rem] rounded-[16px] w-full max-w-[350px] shadow-xl box-border hidden"
-        id="NavigationMenuWrapper">
-        <nav class="hiddenNavMenu hidden flex justify-between items-center mb-7 p-2">
-          <h1 class="Gilroy-Semibold" style="font-size: clamp(25px, 10vw, 50px)">
-            clamp
-          </h1>
-          <button
-            class="p-3 bg-[#3a74ff] rounded-full cursor-pointer hover:scale-105 transition-all duration-300 active:scale-95">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="size-6 text-slate-50">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-            </svg>
-          </button>
-        </nav>
-        <div class="flex flex-col gap-2" id="NavigationMenu"></div>
-        <button
-          class="hidden hiddenNavLoginButton Gilroy-Medium w-full bg-[#3a74ff] text-white my-4 px-7 py-3 gap-2 rounded-[16px] cursor-pointer border-[0.5px] border-[#dddddd] border-opacity-95 hover:scale-105 transition-all duration-300 active:scale-99">
-          Login
-        </button>
-      </div>
-      <div class="flex justify-center items-center min-h-[calc(85vh-100px)] p-[35px] w-full">
-        <div action="" class="w-full max-w-[500px] mx-auto" id="forms">
-          <div class="flex flex-col gap-2">
-            <h1 class="Gilroy-Semibold my-5 text-balance" style="font-size: clamp(25px, 5vw, 35px)">
-              Login
-            </h1>
-            <label class="Gilroy-Semibold text-[14px] md:text-[16px]">Username</label>
-            <input id="usermail"
-              class="Gilroy-Semibold border-[2px] border-[#dddddd] p-3 rounded-[8px] focus:border-[#3a74ff] focus:border-[3px] outline-none transition-all duration-200"
-              type="text" placeholder="admin@clamp.com" />
-            <label class="Gilroy-Semibold mt-5 text-[14px] md:text-[16px]">Password</label>
-            <input id="passwords"
-              class="Gilroy-Semibold border-[2px] border-[#dddddd] p-3 rounded-[8px] focus:border-[#3a74ff] focus:border-[3px] outline-none transition-all duration-200"
-              type="password" placeholder="••••••••••••" />
-            <div class="flex justify-end">
-              <button class="Gilroy-Medium hover:underline cursor-pointer text-[14px] md:text-[16px] text-[#3a74ff]">
-                Forgot password
+  <body>
+    <main class="flex justify-center items-center flex-col">
+      <section class="w-full">
+        <div class="navigationMenu" id="MobileNavigationMenu">
+          <nav class="flex flex-col justify-between">
+            <div class="flex justify-between items-center">
+              <img
+                src="/assets/images/clampLogo.png"
+                class="w-full max-w-[200px]"
+                alt=""
+              />
+              <button
+                title="CloseMenuButton"
+                type="button"
+                id="CloseMenuButton"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-7"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18 18 6M6 6l12 12"
+                  />
+                </svg>
               </button>
             </div>
-
-            <button id="loginBtn" type="submit"
-              class="Gilroy-Semibold mt-5 cursor-pointer rounded-[8px] text-slate-50 p-3 w-full bg-[#3a74ff] hover:scale-[1.01] transition-all duration-150 active:scale-95 text-[14px] md:text-[16px]">
-              Login
-            </button>
-
+            <div class="my-5" id="NavigationMenu"></div>
+          </nav>
+          <div>
+            <a href="./Contact/index.html">
+              <button
+                class="Gilroy-Semibold mt-5 cursor-pointer rounded-[8px] text-slate-50 p-3 w-full bg-[#3a74ff] hover:scale-101 transition-all duration-150 active:scale-95"
+              >
+                Contact us
+              </button>
+            </a>
+            <a href="./login/login.html">
+              <button
+                class="Gilroy-Semibold mt-2 cursor-pointer rounded-[8px] text-[#111111] p-3 w-full border-[0.5px] border-[#dddddd] hover:scale-101 transition-all duration-150 active:scale-95"
+              >
+                Login
+              </button>
+            </a>
           </div>
         </div>
-      </div>
-      <footer class="w-full h-auto p-5 bg-[#f1f1f1] py-[75px] mt-10">
-        <nav class="flex flex-col justify-center items-center items-center">
-          <h1 class="Gilroy-Semibold shalom-footer font-semibold text-[#0d0d0d] flex flex-col p-0 m-0 text-[100px]">
-            clamp
-          </h1>
-          <div class="flex items-center gap-3 my-3">
-            <button
-              class="px-3 py-2 rounded-full bg-[#3a74ff] text-slate-50 Gilroy-Medium cursor-pointer hover:scale-105 active:scale-90 duration-300 ease-in-out">
-              contact
-            </button>
-            <button
-              class="px-3 py-2 rounded-full bg-[#ffffff] cursor-pointer border-[0.5px] border-[#dddddd] hover:bg-[#f9f9f9] border-opacity-95 hover:scale-105 transition-all duration-300 active:scale-95">
-              FAQ
-            </button>
+        <nav
+          class="flex justify-between items-center p-[35px] w-full max-w-[1400px] mx-auto"
+        >
+          <a href="/">
+            <h1
+              class="Gilroy-Semibold"
+              style="font-size: clamp(35px, 10vw, 50px)"
+            >
+              clamp
+            </h1>
+          </a>
+          <div class="flex gap-5 items-center">
+            <div class="flex gap-5 items-center LoginButtonNav">
+              <a
+                href="../About/index.html"
+                class="Gilroy-Medium text-[18px] hover:scale-105 duration-300 active:scale-95"
+                >About us</a
+              >
+              <a
+                href="../Project/index.html"
+                class="Gilroy-Medium text-[18px] hover:scale-105 duration-300 active:scale-95"
+                >Work</a
+              >
+              <a
+                href="../Contact/index.html"
+                class="Gilroy-Medium text-[18px] hover:scale-105 duration-300 active:scale-95"
+                >Contact</a
+              >
+            </div>
+            <div class="flex gap-2 items-center">
+              <button class="hidden navigationMenuButton" id="OpenMenuButton">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 9h16.5m-16.5 6.75h16.5"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
-          <div class="flex justify-center gap-5 flex-wrap my-5" id="footerMenu"></div>
         </nav>
-        <hr class="my-5 border-[#dddddd] border-opacity-25 mx-auto w-full max-w-[1378px]" />
-        <div class="footer-footer flex justify-between items-center w-full max-w-[1378px] mx-auto">
-          <p
-            class="Gilroy-Medium text-[#111111] text-[17px] hover:translate-y-[-3px] duration-100 ease-in-out cursor-pointer">
-            © clamp 2024. All rights reserved.
-          </p>
-          <p
-            class="Gilroy-Medium text-[#111111] text-center text-[18px] hover:translate-y-[-3px] duration-100 ease-in-out cursor-pointer">
-            Clamp, we scale with you - scaling made easy.
-          </p>
+        <div
+          class="NavigationMenu absolute right-10 h-auto border-[0.5px] border-[#eeeeee] bg-white z-50 p-6 mt-[0.10rem] rounded-[16px] w-full max-w-[350px] shadow-xl box-border hidden"
+          id="NavigationMenuWrapper"
+        >
+          <nav
+            class="hiddenNavMenu hidden flex justify-between items-center mb-7 p-2"
+          >
+            <img
+              src="/assets/images/clampLogo.png"
+              class="w-full max-w-[200px]"
+              alt=""
+            />
+            <button
+              class="p-3 bg-[#3a74ff] rounded-full cursor-pointer hover:scale-105 transition-all duration-300 active:scale-95"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6 text-slate-50"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            </button>
+          </nav>
+          <div class="flex flex-col gap-2" id="NavigationMenu"></div>
+          <button
+            class="hidden hiddenNavLoginButton Gilroy-Medium w-full bg-[#3a74ff] text-white my-4 px-7 py-3 gap-2 rounded-[16px] cursor-pointer border-[0.5px] border-[#dddddd] border-opacity-95 hover:scale-105 transition-all duration-300 active:scale-99"
+          >
+            Login
+          </button>
         </div>
-      </footer>
-    </section>
-  </main>
+        <div
+          class="flex justify-center items-center min-h-[calc(85vh-100px)] p-[35px] w-full"
+        >
+          <div action="" class="w-full max-w-[500px] mx-auto" id="forms">
+            <div class="flex flex-col gap-2">
+              <h1
+                class="Gilroy-Semibold my-5 text-balance"
+                style="font-size: clamp(25px, 5vw, 35px)"
+              >
+                Login
+              </h1>
+              <label class="Gilroy-Semibold text-[14px] md:text-[16px]"
+                >Username</label
+              >
+              <input
+                id="usermail"
+                class="Gilroy-Semibold border-[2px] border-[#dddddd] p-3 rounded-[8px] focus:border-[#3a74ff] focus:border-[3px] outline-none transition-all duration-200"
+                type="text"
+                placeholder="admin@clamp.com"
+              />
+              <label class="Gilroy-Semibold mt-5 text-[14px] md:text-[16px]"
+                >Password</label
+              >
+              <input
+                id="passwords"
+                class="Gilroy-Semibold border-[2px] border-[#dddddd] p-3 rounded-[8px] focus:border-[#3a74ff] focus:border-[3px] outline-none transition-all duration-200"
+                type="password"
+                placeholder="••••••••••••"
+              />
+              <div class="flex justify-end">
+                <button
+                  class="Gilroy-Medium hover:underline cursor-pointer text-[14px] md:text-[16px] text-[#3a74ff]"
+                >
+                  Forgot password
+                </button>
+              </div>
 
-  <script src="../universal.js"></script>
-  <script src="../login/login.js"></script>
-</body>
+              <button
+                id="loginBtn"
+                type="submit"
+                class="Gilroy-Semibold mt-5 cursor-pointer rounded-[8px] text-slate-50 p-3 w-full bg-[#3a74ff] hover:scale-[1.01] transition-all duration-150 active:scale-95 text-[14px] md:text-[16px]"
+              >
+                Login
+              </button>
+            </div>
+          </div>
+        </div>
+        <footer class="w-full h-auto p-5 bg-[#f1f1f1] py-[75px] mt-10">
+          <nav class="flex flex-col justify-center items-center items-center">
+            <h1
+              class="Gilroy-Semibold shalom-footer font-semibold text-[#0d0d0d] flex flex-col p-0 m-0 text-[100px]"
+            >
+              clamp
+            </h1>
+            <div class="flex items-center gap-3 my-3">
+              <button
+                class="px-3 py-2 rounded-full bg-[#3a74ff] text-slate-50 Gilroy-Medium cursor-pointer hover:scale-105 active:scale-90 duration-300 ease-in-out"
+              >
+                contact
+              </button>
+              <button
+                class="px-3 py-2 rounded-full bg-[#ffffff] cursor-pointer border-[0.5px] border-[#dddddd] hover:bg-[#f9f9f9] border-opacity-95 hover:scale-105 transition-all duration-300 active:scale-95"
+              >
+                FAQ
+              </button>
+            </div>
+            <div
+              class="flex justify-center gap-5 flex-wrap my-5"
+              id="footerMenu"
+            ></div>
+          </nav>
+          <hr
+            class="my-5 border-[#dddddd] border-opacity-25 mx-auto w-full max-w-[1378px]"
+          />
+          <div
+            class="footer-footer flex justify-between items-center w-full max-w-[1378px] mx-auto"
+          >
+            <p
+              class="Gilroy-Medium text-[#111111] text-[17px] hover:translate-y-[-3px] duration-100 ease-in-out cursor-pointer"
+            >
+              © clamp 2024. All rights reserved.
+            </p>
+            <p
+              class="Gilroy-Medium text-[#111111] text-center text-[18px] hover:translate-y-[-3px] duration-100 ease-in-out cursor-pointer"
+            >
+              Clamp, we scale with you - scaling made easy.
+            </p>
+          </div>
+        </footer>
+      </section>
+    </main>
 
+    <script src="../universal.js"></script>
+    <script src="../login/login.js"></script>
+  </body>
 </html>

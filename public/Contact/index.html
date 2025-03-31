@@ -1,207 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Contact</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <div class="navigationMenu" id="MobileNavigationMenu">
+          <nav class="flex flex-col justify-between">
+            <div class="flex justify-between items-center">
+            <img src="/assets/images/clampLogo.png" class="w-full max-w-[200px]" alt="">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../style.css" />
-  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-  <title>Contact us</title>
-</head>
-
-<body>
-  <main>
-    <section>
-      <div class="navigationMenu" id="MobileNavigationMenu">
-        <nav class="flex flex-col justify-between">
-          <div class="flex justify-between items-center">
-            <h1 class="Gilroy-Semibold" style="font-size: clamp(35px, 10vw, 50px)">
-              clamp
-            </h1>
-            <button id="CloseMenuButton">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="size-7">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-          <div class="my-5" id="NavigationMenu"></div>
-        </nav>
-        <div>
-          <a href="./Contact">
-            <button
-              class="Gilroy-Semibold mt-5 cursor-pointer rounded-[8px] text-slate-50 p-3 w-full bg-[#3a74ff] hover:scale-101 transition-all duration-150 active:scale-95">
-              Contact us
-            </button>
-          </a>
-          <a href="./login">
-            <button
-              class="Gilroy-Semibold mt-2 cursor-pointer rounded-[8px] text-[#111111] p-3 w-full border-[0.5px] border-[#dddddd] hover:scale-101 transition-all duration-150 active:scale-95">
-              Login
-            </button>
-          </a>
-        </div>
-      </div>
-      <nav class="flex justify-between items-center p-[35px] w-full max-w-[1400px] mx-auto">
-        <a href="/">
-          <h1 class="Gilroy-Semibold" style="font-size: clamp(35px, 10vw, 50px)">
-            clamp
-          </h1>
-        </a>
-        <div class="flex gap-5 items-center">
-          <div class="flex gap-5 items-center LoginButtonNav">
-            <a href="../About/" class="Gilroy-Medium text-[18px] hover:scale-105 duration-300 active:scale-95">About
-              us</a>
-            <a href="../Project"
-              class="Gilroy-Medium text-[18px] hover:scale-105 duration-300 active:scale-95">Projects</a>
-            <a href="../Contact/"
-              class="Gilroy-Medium text-[18px] hover:scale-105 duration-300 active:scale-95">Contact</a>
-          </div>
-          <div class="flex gap-2 items-center">
-            <a href="../login">
+              <button id="CloseMenuButton">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-7"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18 18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="my-5" id="NavigationMenu"></div>
+          </nav>
+          <div>
+            <a href="./Contact/index.html">
               <button
-                class="LoginButtonNav Gilroy-Medium px-10 py-3 rounded-[16px] cursor-pointer border-[0.5px] border-[#dddddd] hover:bg-[#f9f9f9] border-opacity-95 hover:scale-105 transition-all duration-300 active:scale-95">
+                class="Gilroy-Semibold mt-5 cursor-pointer rounded-[8px] text-slate-50 p-3 w-full bg-[#3a74ff] hover:scale-101 transition-all duration-150 active:scale-95"
+              >
+                Contact us
+              </button>
+            </a>
+            <a href="./login/login.html">
+              <button
+                class="Gilroy-Semibold mt-2 cursor-pointer rounded-[8px] text-[#111111] p-3 w-full border-[0.5px] border-[#dddddd] hover:scale-101 transition-all duration-150 active:scale-95"
+              >
                 Login
               </button>
             </a>
-            <button class="hidden navigationMenuButton cursor-pointer" id="OpenMenuButton">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="size-7">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
-              </svg>
-            </button>
           </div>
         </div>
-      </nav>
-      <nav class="w-full max-w-[1400px] p-[35px] mx-auto">
-        <h1 class="Gilroy-Bold text-left" style="
-              font-size: clamp(25px, 7.5vw, 100px);
-              line-height: clamp(10px, 10vw, 100px);
-              padding-top: clamp(25px, 5vw, 100px);
-            ">
-          Get in Touch and
-          <br />
-          Let's Build Your Future
-        </h1>
+        <nav
+          class="flex justify-between items-center p-[35px] w-full max-w-[1400px] mx-auto"
+        >
+          <a href="/">
+            <img src="/assets/images/clampLogo.png" class="w-full max-w-[200px]" alt="">
+          </a>
+          <div class="flex gap-5 items-center">
+            <div class="flex gap-5 items-center LoginButtonNav">
+              <a
+                href="./About"
+                class="Gilroy-Medium text-[18px] hover:scale-105 duration-300 active:scale-95"
+                >About us</a
+              >
+              <a
+                href="./Project"
+                class="Gilroy-Medium text-[18px] hover:scale-105 duration-300 active:scale-95"
+                >Projects</a
+              >
+              <a
+                href="./Contact"
+                class="Gilroy-Medium text-[18px] hover:scale-105 duration-300 active:scale-95"
+                >Contact</a
+              >
+            </div>
+            <div class="flex gap-2 items-center">
+              <a href="./login">
+                <button
+                  class="LoginButtonNav Gilroy-Medium px-10 py-3 rounded-[16px] cursor-pointer border-[0.5px] border-[#dddddd] hover:bg-[#f9f9f9] border-opacity-95 hover:scale-105 transition-all duration-300 active:scale-95"
+                >
+                  Login
+                </button>
+              </a>
+              <button
+                class="hidden navigationMenuButton cursor-pointer"
+                id="OpenMenuButton"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-7"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 9h16.5m-16.5 6.75h16.5"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </nav>
 
-        <div class="isolate bg-white">
-          <form action="#" method="POST" class="mt-16 max-w-xl sm:mt-20" id="ContactForm">
+        <div class="w-full max-w-[1400px] p-[35px] mx-auto pb-25">
+          <div
+            class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
+            aria-hidden="true"
+          ></div>
+          <div class="">
+            <h1
+              class="Gilroy-Bold text-left"
+              style="
+                font-size: clamp(25px, 7.5vw, 100px);
+                line-height: clamp(10px, 10vw, 100px);
+                padding-top: clamp(25px, 5vw, 100px);
+              "
+            >
+              Have any questions?
+            </h1>
+          </div>
+          <form action="#" method="POST" class="mt-16 max-w-xl sm:mt-20">
             <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
               <div>
-                <label htmlFor="first-name" class="block text-[15px] Gilroy-Semibold text-gray-900">
-                  First Name
-                </label>
+                <label
+                  for="first-name"
+                  class="block text-[15px] Gilroy-Semibold text-gray-900"
+                  >First name</label
+                >
                 <div class="mt-2.5">
-                  <input required type="text" name="first-name" id="first-name" autocomplete="given-name"
-                    class="block w-full rounded-md border-0 px-3.5 py-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#3a74ff] sm:text-[15px]" />
+                  <input
+                    type="text"
+                    name="first-name"
+                    id="first-name"
+                    autocomplete="given-name"
+                    class="block w-full rounded-md border-0 px-3.5 py-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#3a74ff] sm:text-[15px]"
+                  />
                 </div>
               </div>
-
               <div>
-                <label htmlFor="last-name" class="block text-[15px] Gilroy-Semibold text-gray-900">
-                  Last Name
-                </label>
+                <label
+                  for="last-name"
+                  class="block text-[15px] Gilroy-Semibold text-gray-900"
+                  >Last name</label
+                >
                 <div class="mt-2.5">
-                  <input required type="text" name="last-name" id="last-name" autocomplete="family-name"
-                    class="block w-full rounded-md border-0 px-3.5 py-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#3a74ff] sm:text-[15px]" />
+                  <input
+                    type="text"
+                    name="last-name"
+                    id="last-name"
+                    autocomplete="family-name"
+                    class="block w-full rounded-md border-0 px-3.5 py-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#3a74ff] sm:text-[15px]"
+                  />
                 </div>
               </div>
-
               <div class="sm:col-span-2">
-                <label htmlFor="Selskap/Bedriftny" class="block text-[15px] Gilroy-Semibold text-gray-900">
-                  Organization/Company
-                </label>
+                <label
+                  for="company"
+                  class="block text-[15px] Gilroy-Semibold text-gray-900"
+                  >Company</label
+                >
                 <div class="mt-2.5">
-                  <input required type="text" name="Selskap/Bedriftny" id="Selskap/Bedriftny" autocomplete="organization"
-                    class="block w-full rounded-md border-0 px-3.5 py-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#3a74ff] sm:text-[15px]" />
+                  <input
+                    type="text"
+                    name="company"
+                    id="company"
+                    autocomplete="organization"
+                    class="block w-full rounded-md border-0 px-3.5 py-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#3a74ff] sm:text-[15px]"
+                  />
                 </div>
               </div>
-
               <div class="sm:col-span-2">
-                <label htmlFor="Selskap/Bedriftny" class="block text-[15px] Gilroy-Semibold text-gray-900">
-                  Choosen plan
-                </label>
+                <label
+                  for="email"
+                  class="block text-[15px] Gilroy-Semibold text-gray-900"
+                  >Email</label
+                >
                 <div class="mt-2.5">
-                  <p class="Gilroy-Medium text-slate-50 px-4 py-2 bg-[#3a74ff] w-fit rounded-full" id="plan">Standard</p>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    autocomplete="email"
+                    class="block w-full rounded-md border-0 px-3.5 py-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#3a74ff] sm:text-[15px]"
+                  />
                 </div>
               </div>
-
               <div class="sm:col-span-2">
-                <label htmlFor="email" class="block text-[15px] Gilroy-Semibold text-gray-900">
-                  Mail
-                </label>
+                <label
+                  for="phone-number"
+                  class="block text-[15px] Gilroy-Semibold text-gray-900"
+                  >Phone number</label
+                >
                 <div class="mt-2.5">
-                  <input required type="email" name="email" id="email" autocomplete="email"
-                    class="block w-full rounded-md border-0 px-3.5 py-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#3a74ff] sm:text-[15px]" />
+                  <div>
+                    <input
+                      type="text"
+                      name="phone-number"
+                      id="phone-number"
+                      class="block w-full rounded-md border-0 px-3.5 py-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#3a74ff] sm:text-[15px]"
+                    />
+                  </div>
                 </div>
               </div>
-
               <div class="sm:col-span-2">
-                <label htmlFor="Phonenumber" class="block text-[15px] Gilroy-Semibold text-gray-900">
-                  Phonenumber
-                </label>
+                <label
+                  for="message"
+                  class="block text-[15px] Gilroy-Semibold text-gray-900"
+                  >Message</label
+                >
                 <div class="mt-2.5">
-                  <input required type="number" name="Phonenumber" id="Phone-numer"
-                    class="block w-full rounded-md border-0 px-3.5 py-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#3a74ff] sm:text-[15px]" />
-                </div>
-              </div>
-
-              <div class="sm:col-span-2">
-                <label htmlFor="message" class="block text-[15px] Gilroy-Semibold text-gray-900">
-                  Tell us short what you desire.
-                </label>
-                <div class="mt-2.5">
-                  <textarea required name="message" id="message" rows="{10}"
-                    class="block w-full rounded-md border-0 px-3.5 py-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#3a74ff] sm:text-[15px] resize-none"></textarea>
+                  <textarea
+                    name="message"
+                    id="message"
+                    rows="4"
+                    class="block w-full rounded-md border-0 px-3.5 py-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#3a74ff] sm:text-[15px]"
+                  ></textarea>
                 </div>
               </div>
             </div>
-
             <div class="mt-10">
-              <button type="submit"
-                class="block w-full cursor-pointer rounded-[8px] bg-[#3a74ff] px-3.5 py-3.5 text-center text-[15px] Gilroy-Semibold text-white border-[1px] hover:bg-[#3a86ff] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3a74ff] hover:gap-4 active:scale-90 duration-300 ease-in-out">
+              <button
+                type="submit"
+                class="block w-full cursor-pointer rounded-[8px] bg-[#3a74ff] px-3.5 py-3.5 text-center text-[15px] Gilroy-Semibold text-white border-[1px] hover:bg-[#3a86ff] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3a74ff] hover:gap-4 active:scale-90 duration-300 ease-in-out"
+              >
                 Let's talk
               </button>
             </div>
           </form>
         </div>
-      </nav>
-      <footer class="w-full h-auto p-5 bg-[#f1f1f1] py-[75px] mt-[100px]">
-        <nav class="flex flex-col justify-center items-center items-center">
-          <h1 class="Gilroy-Semibold shalom-footer font-semibold text-[#0d0d0d] flex flex-col p-0 m-0 text-[100px]">
-            clamp
-          </h1>
-          <div class="flex items-center gap-3 my-3">
-            <button
-              class="px-3 py-2 rounded-full bg-[#3a74ff] text-slate-50 Gilroy-Medium cursor-pointer hover:scale-105 active:scale-90 duration-300 ease-in-out">
-              contact
-            </button>
-            <a href="./#FAQSection">
+
+        <footer class="w-full h-auto p-5 bg-[#f1f1f1] py-[75px]">
+          <nav class="flex flex-col justify-center items-center items-center">
+            <h1
+              class="Gilroy-Semibold shalom-footer font-semibold text-[#0d0d0d] flex flex-col p-0 m-0 text-[100px]"
+            >
+              clamp
+            </h1>
+            <div class="flex items-center gap-3 my-3">
               <button
-                class="px-3 py-2 rounded-full bg-[#ffffff] cursor-pointer border-[0.5px] border-[#dddddd] hover:bg-[#f9f9f9] border-opacity-95 hover:scale-105 transition-all duration-300 active:scale-95">
-                FAQ
+                class="px-3 py-2 rounded-full bg-[#3a74ff] text-slate-50 Gilroy-Medium cursor-pointer hover:scale-105 active:scale-90 duration-300 ease-in-out"
+              >
+                contact
               </button>
-            </a>
+              <a href="./#FAQSection">
+                <button
+                  class="px-3 py-2 rounded-full bg-[#ffffff] cursor-pointer border-[0.5px] border-[#dddddd] hover:bg-[#f9f9f9] border-opacity-95 hover:scale-105 transition-all duration-300 active:scale-95"
+                >
+                  FAQ
+                </button>
+              </a>
+            </div>
+            <div
+              class="flex justify-center gap-5 flex-wrap my-5"
+              id="footerMenu"
+            ></div>
+          </nav>
+          <hr
+            class="my-5 border-[#dddddd] border-opacity-25 mx-auto w-full max-w-[1378px]"
+          />
+          <div
+            class="footer-footer flex justify-between items-center w-full max-w-[1378px] mx-auto"
+          >
+            <p
+              class="Gilroy-Medium text-[#111111] text-[17px] hover:translate-y-[-3px] duration-100 ease-in-out cursor-pointer"
+            >
+              © clamp 2024. All rights reserved.
+            </p>
+            <p
+              class="Gilroy-Medium text-[#111111] text-center text-[18px] hover:translate-y-[-3px] duration-100 ease-in-out cursor-pointer"
+            >
+              Clamp, we scale with you - scaling made easy.
+            </p>
           </div>
-          <div class="flex justify-center gap-5 flex-wrap my-5" id="footerMenu"></div>
-        </nav>
-        <hr class="my-5 border-[#dddddd] border-opacity-25 mx-auto w-full max-w-[1378px]" />
-        <div class="footer-footer flex justify-between items-center w-full max-w-[1378px] mx-auto">
-          <p
-            class="Gilroy-Medium text-[#111111] text-[17px] hover:translate-y-[-3px] duration-100 ease-in-out cursor-pointer">
-            © clamp 2024. All rights reserved.
-          </p>
-          <p
-            class="Gilroy-Medium text-[#111111] text-center text-[18px] hover:translate-y-[-3px] duration-100 ease-in-out cursor-pointer">
-            Clamp, we scale with you - scaling made easy.
-          </p>
-        </div>
-      </footer>
-    </section>
-  </main>
+        </footer>
+      </section>
+    </main>
 
-  <script type="text/javascript" src="../universal.js"></script>
-  <script type="text/javascript" src="./Contact.js"></script>
-</body>
-
+    <script src="../universal.js"></script>
+    <script src="./index.js"></script>
+  </body>
 </html>
