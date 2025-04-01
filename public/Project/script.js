@@ -12,24 +12,15 @@ const projects = [
   },
   {
     id: "timur",
-    image: "../assets/images/Project-image-placeholder.png",
+    image: "../assets/images/Dataspot.webp",
     name: "Dataspot",
     year: "2024",
     link: "https://dataspot.gusarov.site/login/",
   },
 ];
 
-// Initialize filter state
-let filter = "all";
-
-// Set up filter function
-function setFilter(newFilter) {
-  filter = newFilter;
-  renderProjects();
-}
-
 // Function to render projects based on current filter
-function renderProjects() {
+function renderProjects(filter) {
   const projectsContainer = document.querySelector(".work-box-container");
 
   // Clear current projects
@@ -90,10 +81,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // Set up event listeners for filter buttons
   document.querySelectorAll(".filter-button").forEach((button) => {
     button.addEventListener("click", () => {
-      setFilter(button.dataset.filter);
+      renderProjects(button.dataset.filter);
     });
   });
 
   // Initial render
-  renderProjects();
+  renderProjects("all");
 });

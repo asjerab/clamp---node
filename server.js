@@ -23,11 +23,7 @@ const connection = mysql.createConnection({
     database: process.env.DB
 });
 
-connection.connect((err) => {
-    if (err) {
-        console.error("Database connection failed:", err);
-        return;
-    }
+connection.connect(() => {
     console.log("Connected to database!");
 });
 
@@ -97,18 +93,45 @@ app.post('/getClampOrders', (req, res) => {
         }
     );
 });
-app.post('/sendOrder', (req, res) => {
+app.post('/send/order', (req, res) => {
     console.log('Request body:', req.body);
     let date = new Date()
     let dateString = `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`
 
     // Validate input
     const { first, last, comp, wish, plan, mail, Phone } = req.body;
-    /*     if (!first || !last || !comp || !wish || !plan || !mail || !Phone) {
+    if (!first || !last || !comp || !wish || !plan || !mail || !Phone) {
             return res.status(400).json({ message: 'Missing required fields' });
-        } */
+        }
 
     connection.execute('INSERT INTO ClampCompany.Orders (firstname, lastname, company, Description, plan, email, phone, Date) VALUES (?, ?, ?, ?, ?, ?, ?, ?)', [first, last, comp, wish, plan, mail, Phone, dateString], (error, result, fields) => {
+        if (error) {
+            console.error('Query error:', error);
+            res.status(500).json({ message: 'Database error', error });
+        }
+        console.log('Insert result:', result);
+        res.status(200).json({
+            email: req.session.user?.email || 'unknown',
+            result,
+            message: 'Success'
+        });
+    }
+    );
+});
+app.post('/send/email', (req, res) => {
+    console.log('Request body:', req.body);
+    let date = new Date()
+    let dateString = `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`
+
+    // Validate input
+    const { first, last, comp, wish, plan, mail, Phone } = req.body;
+    if (!first || !last || !comp || !wish|| !mail || !Phone) {
+        console.log("Not enough fields");
+        
+            return res.status(400).json({ message: 'Missing required fields' });
+        }
+
+    connection.execute('INSERT INTO ClampCompany.emails (Fullname, company, content, sender, phoneNumber, timestamp) VALUES (?, ?, ?, ?, ?, ?)', [first + " " + last, comp, wish, mail, Phone, dateString], (error, result, fields) => {
         if (error) {
             console.error('Query error:', error);
             res.status(500).json({ message: 'Database error', error });

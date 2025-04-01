@@ -8,9 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  document
-    .getElementById("ContactForm")
-    .addEventListener("submit", async (event) => {
+  document.getElementById("ContactForm").addEventListener("submit", async (event) => {
       event.preventDefault();
       console.log("Form submitted");
 
@@ -34,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
       };
       console.log("Sending data:", data);
 
-      const res = await fetch("/sendOrder", {
+      const res = await fetch("/send/order", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
