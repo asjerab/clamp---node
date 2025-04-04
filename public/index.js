@@ -42,7 +42,7 @@ const pricingMenu = document.getElementById("pricingMenu");
 pricingMenu.innerHTML = pricingCards
   .map(
     (card) => `
-      <div class="flex flex-col justify-between items-start border-2 h-auto min-h-96 w-full border-opacity-25 border-gray-200 p-6 md:p-8 rounded-3xl hover:border-blue-500 hover:border-4 transition-all duration-150 ease-in-out">
+      <div class="flex flex-col bg-white justify-between items-start border-2 h-auto min-h-96 w-full border-opacity-25 border-gray-200 p-6 md:p-8 rounded-3xl hover:border-blue-500 hover:border-4 transition-all duration-150 ease-in-out">
         <nav class="flex flex-col gap-3 md:gap-5 w-full">
           <h1 class="font-medium text-gray-900 leading-tight text-base md:text-lg border border-gray-200 rounded-full px-3 py-1 w-fit">
             ${card.title}

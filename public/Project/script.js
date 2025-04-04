@@ -12,7 +12,7 @@ const projects = [
   },
   {
     id: "timur",
-    image: "../assets/images/Dataspot.webp",
+    image: "../assets/images/DataspotImg.png",
     name: "Dataspot",
     year: "2024",
     link: "https://dataspot.gusarov.site/login/",
