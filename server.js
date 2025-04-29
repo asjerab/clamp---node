@@ -145,6 +145,21 @@ app.post('/send/email', (req, res) => {
     }
     );
 });
+app.post('/getClampEmails', (req, res) => {
+    if (!isAuthenticated(req)) {
+        return res.status(200).json({ message: "not auth" });
+    }
+    connection.execute(
+        'SELECT Fullname, company, content, sender, phoneNumber, timestamp FROM ClampCompany.emails',
+        (error, result, fields) => {
+            if (error) {
+                console.error('Query error:', error);
+                return res.status(500).json({ message: 'Database error', error });
+            }
+            res.status(200).json({ email: req.session.user, result, message: "Success" });
+        }
+    );
+});
 
 
 

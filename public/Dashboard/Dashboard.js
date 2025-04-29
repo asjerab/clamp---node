@@ -97,6 +97,66 @@ const loadOrders = async () => {
 };
 loadOrders();
 
+const loadEmails = async () => {
+    try {
+        let res = await fetch("/getClampEmails", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({}),
+        });
+        if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
+        let response = await res.json();
+        
+        if (response.message == "not auth") {
+            console.log("Failed to load emails:");
+            window.location.assign("/login");
+            return;
+        }
+        
+        const emails = response.result;
+        document.getElementById("Tab3Content").innerHTML = emails
+            .map(
+                (email) => `
+                <div class="w-full max-w-[300px] border-[#EEE] border-2 p-3 rounded-[16px]">
+                    <nav class="flex flex-col">
+                        <div class="flex justify-between items-center">
+                            <h1 class="Gilroy-Medium">${escapeHTML(email.Fullname)}</h1>
+                            <p class="Gilroy-Medium text-slate-50 px-2 py-1 mt-0.5 bg-[#3a74ff] w-fit rounded-full text-[13px]">
+                                ${escapeHTML(email.timestamp)}
+                            </p>
+                        </div>
+                        <p class="Gilroy-Medium">${escapeHTML(email.company)}</p>
+                    </nav>
+                    <div class="my-3">
+                        <p>${escapeHTML(email.content)}</p>
+                    </div>
+                    <div class="mt-3 flex flex-wrap gap-2">
+                        <p class="Gilroy-Medium text-slate-50 px-2 py-1 bg-[#3a74ff] w-fit rounded-full text-[13px]">
+                            ${escapeHTML(email.sender)}
+                        </p>
+                        <p class="Gilroy-Medium text-slate-50 px-2 py-1 bg-[#3a74ff] w-fit rounded-full text-[13px]">
+                            ${escapeHTML(email.phoneNumber)}
+                        </p>
+                    </div>
+                </div>
+                `
+            )
+            .join("");
+    } catch (error) {
+        console.error(error);
+        document.getElementById("Tab3Content").innerHTML =
+            '<p class="Gilroy-Semibold mt-4 flex items-center gap-2 bg-[#da1e37] w-fit rounded-[8px] p-3 text-white"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">' +
+            '<path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />' +
+            "</svg>" +
+            "Feil ved lasting av e-poster. Prøv igjen senere.</p>";
+    }
+};
+
+// Kall loadEmails når siden lastes
+loadEmails();
+
 async function handleLogout() {
   try {
     const response = await fetch("/logout", {
