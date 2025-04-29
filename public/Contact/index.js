@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
         if (response.message === "Success") {
           document.getElementById("mailForm").reset();
-          alert("Order submitted successfully!");
+          alert("Mail sendt successfully!");
         } else {
           alert("Submission failed. Please try again.");
         }
