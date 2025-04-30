@@ -179,7 +179,7 @@ function updatePlan(planType) {
   // Lagre den valgte planen i localStorage
   localStorage.setItem("selectedPlan", planType);
   // Naviger til kontaktskjemaet
-  window.location.href = "./submit/"; // Endre til riktig sti hvis nødvendig
+  window.location.href = "/submit/"; // Endre til riktig sti hvis nødvendig
 }
 
 // Kode for priskort knapp
@@ -187,9 +187,9 @@ const ManagedSolutionButton = document.getElementById("ManagedSolutionButton");
 const CompletePackageButton = document.getElementById("CompletePackageButton");
 
 const activeButtonStyle =
-  "Gilroy-Semibold cursor-pointer text-[8] bg-[#ffffff] rounded-full px-3 py-1";
+  "Gilroy-Semibold cursor-pointer text-[15px] bg-[#ffffff] rounded-full px-3 py-1 duration-150 ease-in-out";
 const inactiveButtonStyle =
-  "Gilroy-Semibold cursor-pointer text-[8] rounded-full px-3 py-1";
+  "Gilroy-Semibold cursor-pointer text-[15px] rounded-full px-3 py-1 duration-150 ease-in-out";
 
 ManagedSolutionButton.addEventListener("click", () => {
   pricingMenuTwo.style.display = "flex";

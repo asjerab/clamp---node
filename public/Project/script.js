@@ -39,11 +39,6 @@ function renderProjects(filter) {
     }
   });
 
-  document.getElementById("testing").addEventListener()
-
-
-
-
 
   filteredProjects.forEach((project, index) => {
     const projectElement = document.createElement("div");
