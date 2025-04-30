@@ -182,7 +182,7 @@ function updatePlan(planType) {
   // Lagre den valgte planen i localStorage
   localStorage.setItem("selectedPlan", planType);
   // Naviger til kontaktskjemaet
-  window.location.href = "/submit/"; // Endre til riktig sti hvis nødvendig
+  window.location.href = "/Submit/"; // Endre til riktig sti hvis nødvendig
 }
 
 // Kode for priskort knapp
