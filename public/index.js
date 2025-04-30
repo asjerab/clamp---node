@@ -70,7 +70,7 @@ pricingMenu.innerHTML = pricingCards
           <h1 class="font-semibold text-gray-900 text-2xl md:text-3xl">
             ${card.price}
           </h1>
-          <button class="bg-gray-900 text-white hover:bg-gray-800 hover:text-gray-200 rounded-xl px-6 md:px-10 py-3 cursor-pointer transition-colors" onclick="updatePlan('${
+          <button class="bg-gray-900 text-white hover:bg-gray-800 hover:text-gray-200 rounded-full px-6 md:px-10 py-3 cursor-pointer transition-colors" onclick="updatePlan('${
             card.type
           }')">
             Get Started
@@ -91,6 +91,7 @@ const pricingCardsTwo = [
       "Checking your website once a week.",
       "Implimenting minor changes if requested",
       "2-3 hours of work a month",
+      "Check-in 2-3 times a month",
     ],
     specialFeature: "*Standard package included in the price",
   },
@@ -102,6 +103,7 @@ const pricingCardsTwo = [
       "Monitoring your website.",
       "Implimenting changes if requested",
       "5-7 hours of work a month",
+      "Check-in 5-7 times a month",
     ],
     specialFeature: "*Standard package included in the price",
   },
@@ -113,6 +115,7 @@ const pricingCardsTwo = [
       "Monitoring your website.",
       "Implimenting advanced changes if requested",
       "20+ hours of work a month",
+      "Check-in 7-10 times a month",
     ],
     specialFeature: "*Advanced package included in the price",
   },
@@ -164,7 +167,7 @@ pricingMenuTwo.innerHTML = pricingCardsTwo
           <h1 class="font-semibold text-gray-900 text-xl md:text-2xl">
             ${card.price}
           </h1>
-          <button class="bg-gray-900 text-white hover:bg-gray-800 hover:text-gray-200 rounded-xl px-6 md:px-10 py-3 cursor-pointer transition-colors" onclick="updatePlan('${
+          <button class="bg-gray-900 text-white hover:bg-gray-800 hover:text-gray-200 rounded-full px-6 md:px-10 py-3 cursor-pointer transition-colors" onclick="updatePlan('${
             card.type
           }')">
             Get Started
